@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600&display=swap");
+
+* {
+  font-family: "Inter";
+}
+
+body {
+  background-color: #272727;
+}
+ul li a.nav-link {
+  color: #c9c9c9;
+}
+
+ul li a.nav-link:hover {
+  color: #ffff;
+}
+.navbar-custom {
+  border-bottom: 1px solid #6c757d;
+}
+
+/* Halaman About */
+.about {
+  color: #4ca9ff;
+  line-height: 60px;
+}
+.content-about {
+  width: 90%;
+}
+.img-profile {
+  border: 1px solid #4ca9ff;
+}
+.content-biografi {
+  letter-spacing: 1px;
+  color: #c9c9c9;
+}
+.content-social a i {
+  color: white;
+}
+/* card custom */
+.card-custom {
+  width: 50%;
+  margin-left: 5%;
+  background-color: #424446;
+}
+.icon-custom {
+  top: -30px;
+  background-color: #424446;
+}
+.card-skill {
+  background-color: #424446;
+}
+.card-skill p {
+  text-align: justify;
+}
+
+/* Fortofolio */
+.portofolio {
+  padding-top: 50px;
+}
+
+.portofolio h2 {
+  font-family: "Sora";
+  font-size: 48px;
+}
+
+.portofolio h3 {
+  font-family: "Sora";
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.portofolio p {
+  line-height: 25px;
+  text-align: justify;
+}
+
+.tombol {
+  background-color: #323443;
+  color: #6c757d;
+}
+
+.tombol:hover {
+  background-color: #62d9ff;
+  color: #fff;
+  transition: ease 0.3s;
+}
+
+.border-footer {
+  border-top: 1px solid#fff;
+}
+
+.footer {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer a {
+  font-size: 28px;
+  color: #fff;
+}
+
+/* Page portofolio */
+.Heading-text h1,
+span {
+  font-size: 48;
+  font-family: "Sora";
+  color: #fff;
+}
+
+.container-custom {
+  background-color: #323443;
+  border-radius: 5px;
+  width: 100%;
+  height: 20pc;
+  overflow: hidden;
+}
+.container-custom img {
+  transition: ease 0.5s;
+}
+
+.container-custom img:hover {
+  transform: scale(2);
+}
+.kotak-arrow {
+  background-color: #c9c9c9;
+  padding: 9px;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  top: 10px;
+  right: 10px;
+}
+
+.image-arrow {
+  rotate: -45deg;
+  color: #fff;
+}
+.bg-navbar {
+  background-color: #272727;
+}
+
+/* Image Mobil */
+.img-Mobil {
+  width: 500px;
+  height: 350px;
+}
