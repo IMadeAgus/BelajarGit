@@ -39,8 +39,8 @@ if (isset($_POST['submit'])) {
 	} else {
 		echo "<script>alert('Password Not Matched.')</script>";
 	}
+	header("location:index.php");
 }
-
 ?>
 
 
@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Login.css">
 </head>
 
 <body>
@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
             <div class="input-group"><input type="password" placeholder="Password" name="Password"
                     value="<?php echo $_POST['password']?>" required></div>
 
-            <div class="input-grup"><input type="password" placeholder="ConfirmPasword" name="Cppassword"
+            <div class="input-group"><input type="password" placeholder="ConfirmPasword" name="Cppassword"
                     value="<?php echo $_POST['password']?>" required></div>
 
             <div class="input-group"><button name="submit" class="btn">Register</button></div>
