@@ -39,8 +39,8 @@ if (isset($_POST['submit'])) {
 	} else {
 		echo "<script>alert('Password Not Matched.')</script>";
 	}
+	header("location:index.php");
 }
-
 ?>
 
 
@@ -79,4 +79,5 @@ if (isset($_POST['submit'])) {
         </form>
     </div>
 </body>
+
 </html>
