@@ -16,6 +16,7 @@ body {
 .container {
   width: 450px;
   min-height: 450px;
+  background-color: rgb(255, 5, 5);
   border-radius: 6px;
   box-shadow: 1px, 1px, 5px black;
   padding: 40px 30px;
@@ -118,9 +119,4 @@ input {
 }
 .container p {
   margin-bottom: 20px;
-}
-
-.background {
-  background-color: #6c5ce7;
-  padding: 10%;
 }
