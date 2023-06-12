@@ -5,6 +5,24 @@ if(!isset($_SESSION['username'])){
     header('location: index.php');
 }
 
+
+
+
+// if (isset($_POST['submit'])) {
+// 	$email = $_POST['email'];
+// 	$password = md5($_POST['password']);
+
+// 	$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+// 	$result = mysqli_query($conn, $sql);
+// 	if ($result->num_rows > 0) {
+// 		$row = mysqli_fetch_assoc($result);
+// 		$_SESSION['username'] = $row['username'];
+// 		header("Location: menu.php");
+// 	} else {
+// 		echo "<script>alert('Woops! Email Atau Password anda Salah.')</script>";
+// 	}
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +41,7 @@ if(!isset($_SESSION['username'])){
     <link rel="stylesheet" href="css/style.css" />
     <!-- Aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- link swetalert2 -->
 </head>
 
 <body>
@@ -49,7 +68,7 @@ if(!isset($_SESSION['username'])){
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Log Out</a>
+                        <a class="nav-link" href="logout.php" onclick="return confirm('Yakin mau Log Out?')">Log Out</a>
                     </li>
                 </ul>
             </div>
@@ -64,7 +83,6 @@ if(!isset($_SESSION['username'])){
 
                     <!-- <img src="Banner.jpg" alt=""> -->
                 </div>
-
                 <div class="row mt-5">
                     <h2 class="text-white fw-bold" id="skills">Daftar Mobil</h2>
                     <p class="text-white fw-bold" id="skills">Sewa Mobil Bali Murah Termasuk Supir & BBM </p>
@@ -134,9 +152,6 @@ if(!isset($_SESSION['username'])){
                         </div>
                     </div>
                 </div>
-
-
-
                 <div class="container text-white border-footer py-4 ">
                     <p class="text-center">Reach me out</p>
                     <ul class="d-flex justify-content-center footer">
@@ -153,9 +168,10 @@ if(!isset($_SESSION['username'])){
 
 
         <!-- Bootsrap js -->
-        <script src="js/bootstrap.bundle.js"></script>
-        <!-- Aos js-->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/bootstrap.bundle.js">
+        < /> <!--Aos js-- > <
+        script src = "https://unpkg.com/aos@2.3.1/dist/aos.js" >
+        </script>
         <script>
         AOS.init();
         </script>

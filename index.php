@@ -16,6 +16,7 @@ if (isset($_POST['submit'])) {
 
 	$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 	$result = mysqli_query($conn, $sql);
+    
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['username'] = $row['username'];
@@ -39,6 +40,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="container">
+
         <form action="" method="POST" class="login-email">
             <p style="font-size: 2em; font-weight: 850;">Log In</p>
 

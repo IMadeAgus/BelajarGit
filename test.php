@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    hai
+    <button type="button" onclick="alert('Log Out')">click</button>
 </body>
 
 </html>

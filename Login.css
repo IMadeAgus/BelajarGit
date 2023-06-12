@@ -5,7 +5,7 @@
   font-family: poppins, sans-serif;
 }
 body {
-  background-image: url(bg.jpg);
+  background-image: url(img/bg.jpg);
   min-height: 100vh;
   background-position: center;
   background-size: cover;
@@ -16,7 +16,6 @@ body {
 .container {
   width: 450px;
   min-height: 450px;
-  background-color: rgb(123, 123, 123);
   border-radius: 6px;
   box-shadow: 1px, 1px, 5px black;
   padding: 40px 30px;
@@ -119,4 +118,9 @@ input {
 }
 .container p {
   margin-bottom: 20px;
+}
+
+.background {
+  background-color: #6c5ce7;
+  padding: 10%;
 }
