@@ -7,7 +7,7 @@ session_start();
 error_reporting(0);
 
 if (isset($_SESSION['username'])) {
-    header("Location: welcome.php");
+    header("Location: menu.php");
 }
 
 if (isset($_POST['submit'])) {
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['username'] = $row['username'];
-		header("Location: welcome.php");
+		header("Location: menu.php");
 	} else {
 		echo "<script>alert('Woops! Email Atau Password anda Salah.')</script>";
 	}
@@ -28,6 +28,7 @@ if (isset($_POST['submit'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,24 +36,26 @@ if (isset($_POST['submit'])) {
     <title>Log In</title>
     <link rel="stylesheet" href="Login.css">
 </head>
+
 <body>
     <div class="container">
         <form action="" method="POST" class="login-email">
             <p style="font-size: 2em; font-weight: 850;">Log In</p>
 
-            <div class="input-group"><input type="email" 
-            placeholder="Email" name="email" value="<?php echo $email; ?>"required></div>
+            <div class="input-group"><input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>"
+                    required></div>
 
-            <div class="input-group"><input type="password" 
-            placeholder="Password" name="Password" value="<?php echo $_POST['password']; ?>"required></div>
+            <div class="input-group"><input type="password" placeholder="Password" name="Password"
+                    value="<?php echo $_POST['password']; ?>" required></div>
 
 
-            <div class="input-group"><button name="submit"
-            class="btn">LogIn</button></div>
+            <div class="input-group"><button name="submit" class="btn">LogIn</button></div>
 
             <p class="login-register-text">Don't Have an Account ?
-            <a href="register.php">Register</a>.</p>
+                <a href="register.php">Register</a>.
+            </p>
         </form>
     </div>
 </body>
+
 </html>

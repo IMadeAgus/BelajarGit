@@ -5,7 +5,7 @@
   font-family: poppins, sans-serif;
 }
 body {
-  background-image: url(Banner.jpg);
+  background-image: url(bg.jpg);
   min-height: 100vh;
   background-position: center;
   background-size: cover;
@@ -16,7 +16,7 @@ body {
 .container {
   width: 450px;
   min-height: 450px;
-  background-color: rgb(131, 128, 128);
+  background-color: rgb(123, 123, 123);
   border-radius: 6px;
   box-shadow: 1px, 1px, 5px black;
   padding: 40px 30px;
@@ -47,7 +47,7 @@ body {
 }
 .container.login-email .input-group input:focus,
 .container.login-email .input-group input:valid {
-  border: blue;
+  border: #6c5ce7;
 }
 .container .login-email .input-group .btn {
   display: block;
@@ -57,11 +57,12 @@ body {
   border: none;
   background-color: turquoise;
   outline: none;
-  border-radius: 30px;
+  border-radius: 25px;
   font-size: 1.3rem;
   color: #fff;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 5%;
 }
 
 .container .login-email .input-group .btn:hover {
@@ -88,17 +89,17 @@ input {
   border: 2px solid black;
   padding: 15px 20px;
   font-size: 1rem;
-  border-radius: 30px;
+  border-radius: 25px;
   background: transparent;
   transition: 0.3s;
 }
-.container .login-email .input-group .brn {
+.container .login-email .input-group .btn {
   display: block;
   width: 100%;
   padding: 15px 20px;
   text-align: center;
   border: none;
-  background: #a29bfe;
+  background: #59a3f7;
   outline: none;
   border-radius: 30px;
   font-size: 1.2rem;
@@ -115,4 +116,7 @@ input {
 }
 .login-register-text {
   color: #111;
+}
+.container p {
+  margin-bottom: 20px;
 }
