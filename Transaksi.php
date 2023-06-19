@@ -4,7 +4,7 @@
     <title>Form Transaksi Sewa Mobil</title>
     <style>
         /* Gaya CSS untuk tampilan form */
-        body {
+        body {background-size: cover;
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
@@ -66,25 +66,25 @@
         }
     </style>
 </head>
-<body background="bg.jpg">
+<body background="bg.jpg" >
     <div class="container">
         <h2>Form Transaksi Sewa Mobil</h2>
-        <form id="sewaMobilForm" onsubmit="submitForm(event)">
+        <form method="POST" action="HitungTotalHarga.php" id="sewaMobilForm" onsubmit="submitForm(event)">
             <div class="form-group">
-                <label for="nama">Nama:</label>
+                <label for="nama" name="Nama">Nama:</label>
                 <input type="text" id="nama" required>
             </div>
             <div class="form-group">
-                <label for="mobil">Mobil:</label>
+                <label for="mobil"name="Mobil">Mobil:</label>
                 <select id="mobil" required>
                     <option value="">Pilih Mobil</option>
-                    <option value="BMW">BMW</option>
-                    <option value="Ferari">Ferari</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Suzuki">Suzuki</option>
                     <option value="Avanza">Avanza</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="lamaSewa">Lama Sewa (hari):</label>
+                <label for="LamaSewa" name="LamaSewa">Lama Sewa (hari):</label>
                 <input type="number" id="lamaSewa" required>
             </div>
             <button type="submit" class="btn">Submit</button>
