@@ -5,18 +5,67 @@
 }
 
 body {
-  background-color: #272727;
+  background-color: #ffffff;
 }
 ul li a.nav-link {
-  color: #c9c9c9;
+  color: #ffffff;
 }
 
 ul li a.nav-link:hover {
   color: #ffff;
 }
 .navbar-custom {
-  border-bottom: 1px solid #6c757d;
+  background-color: cornflowerblue;
 }
+/* Banner Section start */
+.hero-section {
+  /* background-image: () 50% no-repeat; */
+  background-size: cover;
+  height: 60vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+.tombol {
+  background-color: #19289c;
+  color: #daeb21;
+}
+
+/* Banner Section start */
+.promo-section {
+  background: url("https://static.pexels.com/photos/248064/pexels-photo-248064.jpeg")
+    50% no-repeat;
+  background-size: cover;
+  height: 60vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.promo-section .promo-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+/* Banner Section end */
 
 /* card custom */
 .card-custom {
