@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include'koneksi.php'?>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Sewa Mobil</title>
-    <title>Project 1</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
     <!-- Bootsrap -->
     <link rel="stylesheet" href="css/bootstrap.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="fontawesome/css/all.css" />
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <!-- CSS Custom -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Aos -->
@@ -20,9 +26,9 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top bg-navbar navbar-custom">
-        <div class="container  py-2">
-            <a class="navbar-brand text-white" href="#">Bravo Rent Cars</a>
+    <nav class="navbar navbar-expand-lg sticky-top  navbar-custom ">
+        <div class="container py-2">
+            <a class="navbar-brand text-white" href="#">Bravo Rent Car</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,7 +47,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
-                    <li class="nav-item">
+                    <li>
                         <a class="nav-link" href="logout.php" onclick="return confirm('Yakin mau Log Out?')">Log Out</a>
                     </li>
                 </ul>
@@ -51,15 +57,21 @@
     <!-- //End Navbar Session -->
 
     <!-- Banner -->
-
-    <div class="hero-section">
-        <div class="hero-section-text">
+    <section class="hero" id="home">
+        <main class="content text-white">
             <h1>Bravo Rent Car</h1>
-            <h5>Drive in Paradise, Feel the Bravo Vibes!</h5>
-        </div>
-    </div>
+            <h5 class="mt-2">Drive in Paradise, Feel the Bravo Vibes!</h5>
+            <a href="#" class="btn tombol mt-3">Book a Car Now</a>
+        </main>
+        <!-- <div class="hero-section">
+            <div class="hero-section-text">
+               
+            </div>
+        </div> -->
+    </section>
 
     <div class="container">
+        <!-- Banner  -->
         <div class="row mt-5">
             <div class="col-8 text-black content-">
                 <h4 class="fw-bold">Welcome To Bravo Rent Car</h4>
@@ -77,45 +89,59 @@
                     Book without credit card, change or cancel reservation any time, free of charge.
                 </p>
                 <br>
-                <div class="my-2">
-                    <a href="propage.html" class="btn tombol"> Book a Car Now</a>
+                <div class="my-3">
+                    <a href="propage.html" class="btn tombol"> Pesan Sekarang</a>
                 </div>
             </div>
 
         </div>
     </div>
+
     <!--//End Banner session  -->
 
     <!-- Promo -->
-    <div class="promo-section row mt-5">
-        <div class="promo-section-text col-8">
-            <h1>Bravo Rent Car Best Offers</h1>
-            <br>
-            <h4>
-                * Start from USD 26 / hours (Half Day Tours)
 
-
-            </h4>
-            <br>
-            <h4>
-                * Get free one cup of Luwak coffee in coffee plantation
-            </h4>
-            <br>
-            <h4>
-                * Get free banana boat for one person (If book more then two days).
-            </h4>
-            <br>
-            <div class="my-2">
-                <a href="propage.html" class="btn tombol"> Book a Car Now</a>
-            </div>
-        </div>
-    </div>
     <!--//End Promo session -->
 
     <!-- Service -->
 
+    <!--//End Service session -->
 
-    <!--//End Service session  -->
+    <!-- List Car -->
+
+    <!-- //End List Car session -->
+
+    <?php
+    include "koneksi.php";
+    $sql = mysqli_query($konek,"select * FROM tbmobil");?>
+    <?php 
+    while($data =mysqli_fetch_array($sql)){?>
+
+    <div class="row container">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $data['Merek'];?>">
+            <div class="card" style="width: 18rem">
+                <img src="admin/CarList/mobil/<?php echo $data['FotoMobil'];?>" class="card-img-top img-fluid"
+                    alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $data['Merek']." -".$data['TipeMobil'];?></h5>
+                    <h5></h5>
+                    <p class="card-text">
+                        Harga : <?php echo $data['Harga'];?>
+                    </p>
+                    <p>Deskrips : for 4 passengers (maximum 7 without luggage)</p>
+                    <a href="formsewa.php" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <?php } ?>
+
+        <!-- Feather Icons js -->
+        <script>
+        feather.replace()
+        </script>
+        <!-- Bootsrap js -->
+        <script src="js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
