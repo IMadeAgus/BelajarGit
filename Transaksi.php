@@ -6,12 +6,9 @@
 
     <link rel="stylesheet" href="transaksi.css">
 </head>
-<<<<<<< HEAD
 <body background="bg.jpg" >
-=======
 
 <body background="bg.jpg">
->>>>>>> e7474f01e427cc0df080591c54f401180cf0e241
     <div class="container">
         <h2>Form Transaksi Sewa Mobil</h2>
         <form method="POST" action="HitungTotalHarga.php" id="sewaMobilForm" onsubmit="submitForm(event)">
@@ -41,10 +38,8 @@
             </div>
             <button type="submit" class="btn">Submit</button>
         </form>
-<<<<<<< HEAD
+
     </div>
-=======
     </div>
 </body>
 </head>
->>>>>>> e7474f01e427cc0df080591c54f401180cf0e241
