@@ -4,42 +4,44 @@
 <head>
     <title>Form Transaksi Sewa Mobil</title>
 
-    <link rel="stylesheet" href="transaksi.css">
+    <link rel="stylesheet" href="formtransaksi.css">
 </head>
-<body background="bg.jpg" >
-
 <body background="bg.jpg">
     <div class="container">
         <h2>Form Transaksi Sewa Mobil</h2>
-        <form method="POST" action="HitungTotalHarga.php" id="sewaMobilForm" onsubmit="submitForm(event)">
+        <form method="POST" action="prosesTambah.php" id="sewaMobilForm" onsubmit="submitForm(event)">
             <div class="form-group">
                 <label for="nama" name="Nama">Nama:</label>
-                <input type="text" id="nama" required>
+                <input type="text" name="Nama" required>
             </div>
             <div class="form-group">
                 <label for="NoHp"name="NoHp">NoHp:</label>
-                <input type="number" id="NoHp"required>
+                <input type="number" name="NoHp"required>
             </div>
             <div class="form-group">
                 <label for="Merek" name="Merek">Merek:</label>
-                <input type="text" id="Merek" required>
+                <input type="text" name="Merek" required>
             </div>
             <div class="form-group">
                 <label for="TipeMobil" name="TipeMobil">TipeMobil:</label>
-                <input type="text" id="TipeMobil" required>
+                <input type="text" name="TipeMobil" required>
+            </div>
+            <div class="form-group">
+                <label for="Harga" name="Harga">Harga:</label>
+                <input type="number" name="Harga" required>
             </div>
             <div class="form-group">
                 <label for="TanggalPeminjaman" name="TanggalPeminjaman">Tanggal Peminjaman:</label>
-                <input type="text" id="TanggalPeminjaman" required>
+                <input type="date" name="TanggalPeminjaman" required>
             </div>
             <div class="form-group">
-                <label for="LamaPenyewaan" name="LamaPenyewaan">LamaPenyewaan</label>
-                <input type="text" id="LamaPenyewaan" required>
+                <label for="LamaPeminjaman" name="LamaPeminjaman">Lama Peminjaman</label>
+                <input type="text" name="LamaPeminjaman" required>
             </div>
-            <button type="submit" class="btn">Submit</button>
+            <button type="submit" class="btn" name="tambah">Submit</button>
         </form>
 
     </div>
     </div>
 </body>
-</head>
+</html>
