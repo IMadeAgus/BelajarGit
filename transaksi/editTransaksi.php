@@ -13,9 +13,9 @@ if(isset($_POST['edit'])){
     
     $sql = "UPDATE tbtransaksi 
             SET Nama                  ='$Nama',
-                NoHp                  = '$NoHp',
-                Merek                 = '$Merek',
-                TipeMobil             = '$TipeMobil',
+                NoHp                  ='$NoHp',
+                Merek                 ='$Merek',
+                TipeMobil             ='$TipeMobil',
                 Harga                 ='$Harga',
                 TanggalPeminjaman     ='$TanggalPeminjaman',
                 LamaPeminjaman        ='$LamaPeminjaman'
@@ -23,7 +23,7 @@ if(isset($_POST['edit'])){
         $query = mysqli_query($koneksi, $sql);
 
         if($query){
-            header("Location :");
+            header("Location : tampilTransaksi.php");
         }
         else{
             die("Perubahan Gagal disimmpan");

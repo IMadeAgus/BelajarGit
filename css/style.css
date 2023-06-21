@@ -27,18 +27,19 @@ ul li a.nav-link:hover {
 
 /* Hero */
 .hero {
-  min-height: 100vh;
+  min-height: 95vh;
+  min-width: 100%;
   display: flex;
-  align-items: center;
-  background-image: url(../bg.jpg);
+  align-items: flex-start;
+  background-image: url(hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   text-align: center;
-
-  justify-content: center;
+  bottom: 0;
 }
+
 .hero::after {
   content: "";
   display: block;
@@ -46,16 +47,17 @@ ul li a.nav-link:hover {
   width: 100%;
   height: 30%;
   bottom: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 10%,
     rgba(255, 255, 255, 0) 60%
-  );
+  ); */
 }
 
 .hero .content {
-  padding: 1, 4rem 7%;
+  padding: 12vh 7% 0;
   max-width: 60rem;
+  margin: 0 auto; /* Menengahkan konten */
 }
 
 .hero .content h1 {
@@ -67,13 +69,26 @@ ul li a.nav-link:hover {
 
 .tombol {
   background-color: #4ca9ff;
-  color: #f29e0d;
+  color: #fff;
 }
 
 .tombol:hover {
   background-color: #62d9ff;
-  color: #fff;
+
+  color: #f29e0d;
   transition: ease 0.3s;
 }
 /* Hero end */
 /* Halaman About */
+/* Halaman About end */
+
+/* List Car Start */
+.card {
+  width: 100%;
+}
+
+.card-img-top {
+  height: 200px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+  object-fit: cover;
+}
+/* List Car End */

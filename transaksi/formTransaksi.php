@@ -6,17 +6,18 @@
 
     <link rel="stylesheet" href="formtransaksi.css">
 </head>
+
 <body background="bg.jpg">
     <div class="container">
         <h2>Form Transaksi Sewa Mobil</h2>
-        <form method="POST" action="prosesTambah.php" id="sewaMobilForm" onsubmit="submitForm(event)">
+        <form method="POST" action="tambahTransaksi.php" onsubmit="submitForm(event)">
             <div class="form-group">
                 <label for="nama" name="Nama">Nama:</label>
                 <input type="text" name="Nama" required>
             </div>
             <div class="form-group">
-                <label for="NoHp"name="NoHp">NoHp:</label>
-                <input type="number" name="NoHp"required>
+                <label for="NoHp" name="NoHp">NoHp:</label>
+                <input type="number" name="NoHp" required>
             </div>
             <div class="form-group">
                 <label for="Merek" name="Merek">Merek:</label>
@@ -44,4 +45,5 @@
     </div>
     </div>
 </body>
+
 </html>

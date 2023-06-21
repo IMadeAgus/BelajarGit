@@ -20,7 +20,7 @@
     <!-- CSS Custom -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- link swetalert2 -->
 </head>
 
@@ -56,6 +56,11 @@
     </nav>
     <!-- //End Navbar Session -->
 
+    <!-- <div class="hero-section">
+            <div class="hero-section-text">
+               
+            </div>
+        </div> -->
     <!-- Banner -->
     <section class="hero" id="home">
         <main class="content text-white">
@@ -63,13 +68,8 @@
             <h5 class="mt-2">Drive in Paradise, Feel the Bravo Vibes!</h5>
             <a href="#" class="btn tombol mt-3">Book a Car Now</a>
         </main>
-        <!-- <div class="hero-section">
-            <div class="hero-section-text">
-               
-            </div>
-        </div> -->
-    </section>
 
+    </section>
     <div class="container">
         <!-- Banner  -->
         <div class="row mt-5">
@@ -113,35 +113,49 @@
 
     <?php
     include "koneksi.php";
-    $sql = mysqli_query($konek,"select * FROM tbmobil");?>
-    <?php 
-    while($data =mysqli_fetch_array($sql)){?>
+    $sql = mysqli_query($konek, "SELECT * FROM tbmobil");
+?>
 
-    <div class="row container">
-        <div class="col-lg-4 col-md-6 portfolio-item filter-<?php echo $data['Merek'];?>">
-            <div class="card" style="width: 18rem">
-                <img src="admin/CarList/mobil/<?php echo $data['FotoMobil'];?>" class="card-img-top img-fluid"
-                    alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $data['Merek']." -".$data['TipeMobil'];?></h5>
-                    <h5></h5>
-                    <p class="card-text">
-                        Harga : <?php echo $data['Harga'];?>
-                    </p>
-                    <p>Deskrips : for 4 passengers (maximum 7 without luggage)</p>
-                    <a href="formsewa.php" class="btn btn-primary">Go somewhere</a>
+    <div class="container">
+        <div class="row portfolio-container" data-aos="fade-up">
+            <?php 
+            $counter = 1; // counter untuk menghitung jumlah card yang ditampilkan
+            while ($hasil = mysqli_fetch_array($sql)) {
+                ?>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
+                <div class="card">
+                    <img src="admin/CarList/mobil/<?php echo $hasil['FotoMobil'];?>" class="card-img-top img-fluid"
+                        alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $hasil['Merek']." -".$hasil['TipeMobil'];?></h5>
+                        <h5></h5>
+                        <p class="card-text">
+                            Harga : <?php echo $hasil['Harga'];?>
+                        </p>
+                        <p>for 4 passengers (maximum 7 without luggage)</p>
+                        <a href="formsewa.php" class="btn btn-primary">Go somewhere</a>
+                    </div>
                 </div>
             </div>
+
+            <?php 
+                if ($counter % 4 == 0) { // setiap 4 card, tambahkan div baru untuk membuat baris baru
+                    echo '</div><div class="row portfolio-container" data-aos="fade-up">';
+                }
+                $counter++;
+            }
+        ?>
         </div>
+    </div>
 
-        <?php } ?>
 
-        <!-- Feather Icons js -->
-        <script>
-        feather.replace()
-        </script>
-        <!-- Bootsrap js -->
-        <script src="js/bootstrap.bundle.js"></script>
+
+    <!-- Feather Icons js -->
+    <script>
+    feather.replace()
+    </script>
+    <!-- Bootsrap js -->
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
