@@ -1,5 +1,5 @@
 <?php
-    include 'koneksi.php';
+    include 'config.php';
 
     if(isset($_POST['tambah'])){
         $Nama = $_POST['Nama'];
@@ -12,13 +12,11 @@
     
         $sql = "INSERT INTO tb_transaksi (Nama, NoHp, Merek, TipeMobil, Harga, TanggalPeminjaman, LamaPeminjaman ) 
                     VALUE ('$Nama', '$NoHp', '$Merek', '$TipeMobil', '$Harga', '$TanggalPeminjaman', '$LamaPeminjaman')";
-        $query = mysqli_query($konek, $sql);
+        $query = mysqli_query($koneksi, $sql);
     
         if($query) {
-            echo"Data berhasil disimpan";
-        } else {
-            header('location:index.php?status=gagal');
-        }    
+            header("location:tampilTransaksi.php");
+        } 
     } else {
         die("Gagal terhubung dengan database!");
     }
