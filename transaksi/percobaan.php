@@ -166,7 +166,7 @@ if (isset($_POST['simpan'])) {
                         <tbody>
                             <?php
                             $sql2 =" SELECT * FROM tbtransaksi order by id desc";
-                            $q2   = mysqli_connect($koneksi, $sql2);
+                            $q2   = mysqli_connect($Koneksi, $sql2);
                             while($r2 = mysqli_fetch_array($q2)){
                                 $Nama   = $r2['Nama'];
                                 $NoHp   = $r2['NoHp'];
