@@ -10,9 +10,7 @@
         $TanggalPeminjaman = $_POST['TanggalPeminjaman'];
         $LamaPeminjaman = $_POST['LamaPeminjaman'];
     
-        $sql = "INSERT INTO tbtransaksi (Nama, NoHp, Merek, TipeMobil, Harga, TanggalPeminjaman, LamaPeminjaman ) 
-                    VALUE ('$Nama', '$NoHp', '$Merek', '$TipeMobil', '$Harga', '$TanggalPeminjaman', '$LamaPeminjaman')";
-        $query = mysqli_query($koneksi, $sql);
+        $query = mysqli_query($koneksi,"INSERT INTO tbmobil VALUES(NULL, '" . $_POST['Nama'] . "','" . $_POST['NoHp'] . "', '" . $_POST['Merek'] . "', '" . $_POST['TipeMobil'] . "','" . $_POST['Harga'] . "','" . $_POST['TanggalPeminjaman'] . "','" . $_POST['LamaPeminjaman'] . "')");
     
         if($query) {
             header('Location : tampilTransaksi.php');}

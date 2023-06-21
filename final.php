@@ -56,51 +56,49 @@
     </nav>
     <!-- //End Navbar Session -->
 
-    <!-- <div class="hero-section">
-            <div class="hero-section-text">
-               
-            </div>
-        </div> -->
-    <!-- Banner -->
+    <!-- Hero -->
     <section class="hero" id="home">
         <main class="content text-white">
             <h1>Bravo Rent Car</h1>
             <h5 class="mt-2">Drive in Paradise, Feel the Bravo Vibes!</h5>
             <a href="#" class="btn tombol mt-3">Book a Car Now</a>
         </main>
-
     </section>
+    <!-- Hero Section end -->
+
+    <!-- Banner  -->
     <div class="container">
-        <!-- Banner  -->
         <div class="row mt-5">
-            <div class="col-8 text-black content-">
+            <div class="col-8 text-black content">
                 <h4 class="fw-bold">Welcome To Bravo Rent Car</h4>
-                <br>
-                <p>
+                <p class="mt-5">
                     Travel around Bali in a new car with your personal, English’s speaking driver.
                 </p>
-                <br>
-                <p>
+                <p class="mt-4">
                     Get 10 hours daily service, fuel and unlimited mileage to go just anywhere you want!
                     Plan any tour, get a ride to beaches, shops and restaurants.
                 </p>
-                <br>
-                <p>
+                <p class="mt-4">
                     Book without credit card, change or cancel reservation any time, free of charge.
                 </p>
-                <br>
-                <div class="my-3">
+                <div class="my-5">
                     <a href="propage.html" class="btn tombol"> Pesan Sekarang</a>
                 </div>
             </div>
 
         </div>
     </div>
-
     <!--//End Banner session  -->
 
     <!-- Promo -->
-
+    <section class="Promo">
+        <main class="content text-white ">
+            <h1>Bravo Rent Car Best Offers</h1>
+            <h5 class="mt-2">Free Airport Pickup for an Elevated Experience</h5>
+            <h5 class="mt-2">Get free one cup of Luwak coffee in coffee plantation</h5>
+            <h5 class="mt-2">Get free banana boat for one person (If book more then two days).</h5>
+        </main>
+    </section>
     <!--//End Promo session -->
 
     <!-- Service -->
@@ -117,7 +115,23 @@
 ?>
 
     <div class="container">
-        <div class="row portfolio-container" data-aos="fade-up">
+        <div class="row mt-5">
+            <div class="col-8 content">
+                <h4 class="fw-bold">Rent a Car With Driver</h4>
+                <p class="mt-4">
+                    Travel around Bali in a new car with your personal, English’s speaking driver.
+                </p>
+                <p class="mt-2">
+                    No deposit is required – only pay in cash when you meet your driver.
+                </p>
+                <p class="mt-2">
+                    Grab your car & driver by clicking “BOOK THIS CAR” button at each car model below, or simply click
+                    this number to reach to us on WhatsApp: +628123854432
+                </p>
+            </div>
+
+        </div>
+        <div class="row">
             <?php 
             $counter = 1; // counter untuk menghitung jumlah card yang ditampilkan
             while ($hasil = mysqli_fetch_array($sql)) {
