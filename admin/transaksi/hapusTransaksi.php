@@ -6,7 +6,7 @@ if( isset($_GET['id']) ){
     $query = mysqli_query($koneksi, $sql);
     
     if( $query ){
-        header('Location: list-buku.php');
+        header("location:tampilTransaksi.php");
     } else {
         die("Gagal Dihapus");
     }

@@ -23,7 +23,7 @@ if(isset($_POST['edit'])){
         $query = mysqli_query($koneksi, $sql);
 
         if($query){
-            header("Location : tampilTransaksi.php");
+            header("location:tampilTransaksi.php");
         }
         else{
             die("Perubahan Gagal disimmpan");

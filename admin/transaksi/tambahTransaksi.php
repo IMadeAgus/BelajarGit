@@ -10,10 +10,10 @@
         $TanggalPeminjaman = $_POST['TanggalPeminjaman'];
         $LamaPeminjaman = $_POST['LamaPeminjaman'];
     
-        $query = mysqli_query($koneksi,"INSERT INTO tbmobil VALUES(NULL, '" . $_POST['Nama'] . "','" . $_POST['NoHp'] . "', '" . $_POST['Merek'] . "', '" . $_POST['TipeMobil'] . "','" . $_POST['Harga'] . "','" . $_POST['TanggalPeminjaman'] . "','" . $_POST['LamaPeminjaman'] . "')");
+        $query = mysqli_query($koneksi,"INSERT INTO tbtransaksi VALUES(NULL, '" . $_POST['Nama'] . "','" . $_POST['NoHp'] . "', '" . $_POST['Merek'] . "', '" . $_POST['TipeMobil'] . "','" . $_POST['Harga'] . "','" . $_POST['TanggalPeminjaman'] . "','" . $_POST['LamaPeminjaman'] . "')");
     
         if($query) {
-            header('Location : tampilTransaksi.php');}
+            header("location:tampilTransaksi.php");}
             
     } else {
         die("Gagal terhubung dengan database!");
