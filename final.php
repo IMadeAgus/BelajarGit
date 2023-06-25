@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include'koneksi.php'?>
+<?php include 'koneksi.php';?>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Sewa Mobil</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=PT+Sans:wght@400;700&display=swap"
-        rel="stylesheet">
     <!-- Bootsrap -->
     <link rel="stylesheet" href="css/bootstrap.css" />
-    <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
     <!-- CSS Custom -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Aos -->
@@ -28,30 +20,37 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top  navbar-custom ">
         <div class="container py-2">
-            <a class="navbar-brand text-white" href="#">Bravo Rent Car</a>
+            <a class="navbar-brand fw-bold text-white d-flex align-items-center justify-content-center" href="#">
+                <img src="img/logo.png" width="50" height="50" class="navbar-logo" alt="">
+                BRAVO RENT CAR
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse d-flex align-items-center justify-content-center">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#skills">Sewa Mobil</a>
+                        <a class="nav-link" href="#CarList">CAR LIST</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portofolio">Retur Mobil</a>
+                        <a class="nav-link" href="">ORDER LIST</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="logout.php" onclick="return confirm('Yakin mau Log Out?')">Log Out</a>
+                        <a class="nav-link" href="#">GALLERY</a>
                     </li>
                 </ul>
             </div>
+            <!-- <div class="collapse navbar-collapse">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="logout.php" onclick="return confirm('Yakin mau Log Out?')">LOG OUT</a>
+                    </li>
+                </ul>
+            </div> -->
         </div>
     </nav>
     <!-- //End Navbar Session -->
@@ -59,19 +58,18 @@
     <!-- Hero -->
     <section class="hero" id="home">
         <main class="content text-white">
-            <h1>Bravo Rent Car</h1>
-            <h5 class="mt-2">Drive in Paradise, Feel the Bravo Vibes!</h5>
-            <a href="#" class="btn tombol mt-3">Book a Car Now</a>
+            <h1 class="fw-bold">BRAVO RENT CAR</h1>
+            <h3 class="mt-2">Drive in Paradise, Feel the Bravo Vibes!</h3>
         </main>
     </section>
     <!-- Hero Section end -->
 
     <!-- Banner  -->
-    <div class="container">
-        <div class="row mt-5">
+    <div class="container banner">
+        <div class="row my-5">
             <div class="col-8 text-black content">
-                <h4 class="fw-bold">Welcome To Bravo Rent Car</h4>
-                <p class="mt-5">
+                <h2 class="fw-bold">Welcome To Bravo Rent Car</h2>
+                <p class="mt-4">
                     Travel around Bali in a new car with your personal, English’s speaking driver.
                 </p>
                 <p class="mt-4">
@@ -82,7 +80,7 @@
                     Book without credit card, change or cancel reservation any time, free of charge.
                 </p>
                 <div class="my-5">
-                    <a href="propage.html" class="btn tombol"> Pesan Sekarang</a>
+                    <a href="#CarList" class="btn tombol"> Book a Car Now</a>
                 </div>
             </div>
 
@@ -93,29 +91,69 @@
     <!-- Promo -->
     <section class="Promo">
         <main class="content text-white ">
-            <h1>Bravo Rent Car Best Offers</h1>
-            <h5 class="mt-2">Free Airport Pickup for an Elevated Experience</h5>
-            <h5 class="mt-2">Get free one cup of Luwak coffee in coffee plantation</h5>
-            <h5 class="mt-2">Get free banana boat for one person (If book more then two days).</h5>
+            <h1 class="fw-bold">Bravo Rent Car Best Offers</h1>
+            <h5 class="mt-4">Free Airport Pickup for an Elevated Experience</h5>
+            <h5 class="mt-3">Get free one cup of Luwak coffee in coffee plantation</h5>
+            <h5 class="mt-3">Get free banana boat for one person (If book more then two days).</h5>
         </main>
     </section>
     <!--//End Promo session -->
 
     <!-- Service -->
-
+    <div class="container service">
+        <div class="row mt-5">
+            <h2 class="fw-bold d-flex justify-content-center mb-5">Service</h2>
+            <div class="col-4 ">
+                <div class="d-flex justify-content-center mb-3">
+                    <h4 class="d-flex align-items-center">
+                        Professional Drivers
+                    </h4>
+                </div>
+                <div class="px-2 text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                        distinctio unde maxime amet nam error labore culpa.
+                    </p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="d-flex justify-content-center mb-3">
+                    <h4 class="d-flex align-items-center">
+                        <i class="fa-brands fa-css3-alt fs-1 me-3"></i>Transparent Pricing
+                    </h4>
+                </div>
+                <div class="text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                        atque laboriosam nulla nihil dolore in illo enim quia,
+                    </p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="d-flex justify-content-center mb-3">
+                    <h4 class="d-flex align-items-center">
+                        Excellent Cars
+                    </h4>
+                </div>
+                <div class="text-center">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                        atque laboriosam nulla nihil dolore in illo enim quia,
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--//End Service session -->
 
     <!-- List Car -->
-
-    <!-- //End List Car session -->
-
     <?php
     include "koneksi.php";
     $sql = mysqli_query($konek, "SELECT * FROM tbmobil");
 ?>
 
-    <div class="container">
-        <div class="row mt-5">
+    <div class="container mt-5 carlist" id="CarList">
+        <div class="row -5">
             <div class="col-8 content">
                 <h4 class="fw-bold">Rent a Car With Driver</h4>
                 <p class="mt-4">
@@ -137,16 +175,16 @@
             while ($hasil = mysqli_fetch_array($sql)) {
                 ?>
             <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
-                <div class="card">
+                <div class="card text-center">
                     <img src="admin/CarList/mobil/<?php echo $hasil['FotoMobil'];?>" class="card-img-top img-fluid"
                         alt="..." />
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $hasil['Merek']." -".$hasil['TipeMobil'];?></h5>
+                        <h5 class="card-title fw-bold"><?php echo $hasil['Merek']." -".$hasil['TipeMobil'];?></h5>
                         <h5></h5>
-                        <p class="card-text">
-                            Harga : <?php echo $hasil['Harga'];?>
+                        <p class="card-text fw-semibold">
+                            IDR <?php echo $hasil['Harga'];?>
                         </p>
-                        <p>for 4 passengers (maximum 7 without luggage)</p>
+                        <p>Recommended for 4 passengers (maximum 7 without luggage)</p>
                         <a href="formsewa.php" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
@@ -154,20 +192,17 @@
 
             <?php 
                 if ($counter % 4 == 0) { // setiap 4 card, tambahkan div baru untuk membuat baris baru
-                    echo '</div><div class="row portfolio-container" data-aos="fade-up">';
+                    echo '</div><div class="row" >';
                 }
                 $counter++;
             }
         ?>
         </div>
     </div>
+    <!-- //End List Car session -->
 
 
 
-    <!-- Feather Icons js -->
-    <script>
-    feather.replace()
-    </script>
     <!-- Bootsrap js -->
     <script src="js/bootstrap.bundle.js"></script>
 </body>

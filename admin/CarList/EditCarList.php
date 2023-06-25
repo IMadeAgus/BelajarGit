@@ -9,12 +9,12 @@ if(isset($_POST['ubah'])){
     $id = $_POST['id'];
     $MerekMobil = $_POST['MerekMobil'];
     $TipeMobil = $_POST['TipeMobil'];
-    $PlatNomer = $_POST['PlatNomer'];
+    $Deskripsi = $_POST['Deskripsi'];
     $Harga = $_POST['Harga'];
     $sql = "UPDATE tbmobil
                 SET Merek='$MerekMobil', 
                     TipeMobil='$TipeMobil', 
-                    PlatNomer='$PlatNomer',
+                    PlatNomer='$Deskripsi',
                     FotoMobil='$name_p', 
                     Harga='$Harga' 
                 WHERE id='$id'";
@@ -25,7 +25,11 @@ if(isset($_POST['ubah'])){
     } else {
         die("Perubahan Gagal Disimpan");
     }
-} else {
+}
+if(isset($_POST['batal'])){
+    header("location:ShowCarList.php");
+}
+else {
     die("Gagal terhubung dengan database!");
 }
 

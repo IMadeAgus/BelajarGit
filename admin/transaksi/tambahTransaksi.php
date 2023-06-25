@@ -10,8 +10,7 @@
         $TanggalPeminjaman = $_POST['TanggalPeminjaman'];
         $LamaPeminjaman = $_POST['LamaPeminjaman'];
     
-        $sql = "INSERT INTO tb_transaksi (Nama, NoHp, Merek, TipeMobil, Harga, TanggalPeminjaman, LamaPeminjaman ) 
-                    VALUE ('$Nama', '$NoHp', '$Merek', '$TipeMobil', '$Harga', '$TanggalPeminjaman', '$LamaPeminjaman')";
+        $sql = "INSERT INTO tb_transaksi VALUES ('','$Nama', '$NoHp', '$Merek', '$TipeMobil', '$Harga', '$TanggalPeminjaman', '$LamaPeminjaman')";
         $query = mysqli_query($koneksi, $sql);
     
         if($query) {
