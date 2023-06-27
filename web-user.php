@@ -151,6 +151,9 @@ if(!isset($_SESSION['username'])){
             <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
         </div>
     </section>
+    <!-- <div>
+        <img src="img/bg.jpg" alt="">
+    </div> -->
     <!-- End Hero -->
 
     <main id="main">
@@ -510,7 +513,7 @@ if(!isset($_SESSION['username'])){
         <!-- End Team Section -->
 
         <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact section-bg">
+        <!-- <section id="contact" class="contact section-bg">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Contact</h2>
@@ -589,7 +592,7 @@ if(!isset($_SESSION['username'])){
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- End Contact Section -->
     </main>
     <!-- End #main -->

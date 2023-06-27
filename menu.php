@@ -142,13 +142,7 @@
 
 
         <!-- Bootsrap js -->
-        <script src="js/bootstrap.bundle.js">
-        < /> <!--Aos js-- > <
-        script src = "https://unpkg.com/aos@2.3.1/dist/aos.js" >
-        </script>
-        <script>
-        AOS.init();
-        </script>
+        <script src="js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
