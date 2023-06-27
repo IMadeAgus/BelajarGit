@@ -112,7 +112,7 @@ input {
 .container,
 .login-email .input-group .btn:hover {
   transform: translate(-5px);
-  background: #e0dfe9;
+  background: #a8a8aa;
 }
 .login-register-text {
   color: #111;
