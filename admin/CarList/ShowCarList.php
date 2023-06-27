@@ -95,7 +95,7 @@
         </table>
         <div class="row">
             <div class="d-flex align-items-end justify-content-end">
-                <a href="cetakLaporan.php" class="btn btn-primary">
+                <a href="cetakLaporan.php" class="btn btn-success" A>
                     Cetak
                 </a>
             </div>

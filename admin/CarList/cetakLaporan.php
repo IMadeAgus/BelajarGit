@@ -6,7 +6,7 @@ $pdf=new FPDF('P','mm','A4');
 $pdf->AddPage();
 
 $pdf->SetFont('Times','B',13);
-$pdf->Cell(200,10,'DATA LIST MOBIl',0,0,'C');
+$pdf->Cell(400,10,'DATA LIST MOBIl',0,0,'C');
 
 $pdf->Cell(10,15,'',0,1);
 $pdf->SetFont('Times','B',9);
@@ -30,5 +30,4 @@ $pdf->Cell(35,6, $d['Harga'],1,1);
 }
 
 $pdf->Output();
-
 ?>
