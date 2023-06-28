@@ -17,7 +17,7 @@ $cek = mysqli_num_rows($login);
 // cek apakah username dan password di temukan pada database
 if($cek > 0){
 
-	$data = mysqli_fetch_assoc($login);
+	$data = mysqli_fetch_assoc($login);	
 
 	// cek jika user login sebagai admin
 	if($data['level']=="admin"){
@@ -26,7 +26,7 @@ if($cek > 0){
 		$_SESSION['email'] = $email;
 		$_SESSION['level'] = "admin";
 		// alihkan ke halaman dashboard admin
-		header("location:final.php");
+		header("location: halaman_admin.php");
 
 	}else{
 

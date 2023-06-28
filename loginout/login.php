@@ -7,7 +7,7 @@ session_start(); // untuk menginisiasi sesi, menjaga status login di berbagai ha
 error_reporting(0);
 
 if (isset($_SESSION['username'])) {
-    header("Location: web-user.php");
+    header("Location: final.php");
 }
 
 if (isset($_POST['submit'])) {
@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
 	if ($result->num_rows > 0) { //ketika sudah cocok dengan yang sudah didaftarkan maka user berhasil login.
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['username'] = $row['username'];
-		header("Location: web-user.php");
+		header("Location: final.php");
 	} else {
 		echo "<script>alert('Woops! Email Atau Password anda Salah.')</script>";
 	}
@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="Login.css">
 </head>
 
 <body>
