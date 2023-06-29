@@ -11,6 +11,7 @@ if (isset($_SESSION['username'])) {
 
 if (isset($_POST['submit'])) {
 	$username = $_POST['username'];
+	$nama =$_POST['nama'];
 	$email = $_POST['email'];
 	$password = md5($_POST['password']);
 	$cpassword = md5($_POST['cpassword']);
@@ -20,8 +21,8 @@ if (isset($_POST['submit'])) {
 		$result = mysqli_query($conn, $sql);
 
 		if (!$result->num_rows > 0) { 
-			$sql = "INSERT INTO users (username, email, password)
-					VALUES ('$username', '$email', '$password')";
+			$sql = "INSERT INTO users (username,nama, email, password)
+					VALUES ('$username','$nama', '$email', '$password')";
 			$result = mysqli_query($conn, $sql);
 
 			if ($result) { // untuk mengecek apakah query dengan variable result sesuai.
@@ -29,6 +30,7 @@ if (isset($_POST['submit'])) {
 				
 				// untuk mengsongkan data agar user bisa register ulang
 				$username = "";
+				$nama = "";
 				$email = "";
 				$_POST['password'] = "";
 				$_POST['cpassword'] = "";
@@ -64,6 +66,8 @@ if (isset($_POST['submit'])) {
     <div class="container">
         <form action="" method="POST" class="login-email">
             <p style="font-size:2em;font-weight:850;">REGISTER</p>
+            <div class="input-group"><input type="text" placeholder="Nama" name="nama" value="<?php echo $nama;?>">
+            </div>
             <div class="input-group"><input type="text" placeholder="UserName" name="username"
                     value="<?php echo $username;?>">
             </div>

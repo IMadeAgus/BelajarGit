@@ -19,13 +19,13 @@
 
     <p>Halo <b><?php echo $_SESSION['email']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.
     </p>
-    <a href="logout.php">LOGOUT</a>
+    <a class="nav-link" href="logout.php" onclick="return confirm('Yakin mau Log Out?')">LOG
+        OUT</a>
 
     <br />
     <br />
 
-    <a><a href="https://www.malasngoding.com/membuat-login-multi-user-level-dengan-php-dan-mysqli">Membuat Login Multi
-            Level Dengan PHP</a> - www.malasngoding.com</a>
+    <h1>KONTOL BAPAK KAU PECAH!</h1>
 </body>
 
 </html>

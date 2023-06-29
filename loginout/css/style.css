@@ -1,0 +1,195 @@
+* {
+  font-family: "OpenSans", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* Navbar */
+ul li a.nav-link {
+  color: #ffffff;
+}
+
+ul li a.nav-link:hover {
+  font-weight: bold;
+  color: #fff;
+}
+.navbar-custom {
+  width: 100%;
+  height: 10vh;
+  left: 0px;
+  top: 0px;
+  background: #412496;
+}
+.navbar-logo {
+  margin-right: 0.5rem;
+}
+/* Navbar End */
+
+/* Hero */
+.hero {
+  min-height: 95vh;
+  min-width: 100%;
+  display: flex;
+  align-items: flex-start;
+  background-image: url(hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .content {
+  padding: 20vh 7% 0;
+  max-width: 60rem;
+  text-align: center;
+  margin: 0 auto; /* Menengahkan konten */
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.tombol {
+  background-color: #412496;
+  color: #fff;
+}
+
+.tombol:hover {
+  background-color: #412496;
+  font-weight: bold;
+  color: #ffff;
+  transition: ease 0.3s;
+}
+/* Hero end */
+
+/* Banner */
+.banner h2 {
+  color: #412496;
+}
+/* Banner end */
+
+/* Promo */
+.Promo {
+  min-height: 60vh;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: url(PromoEdit.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.Promo .content {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.Promo .content h1 {
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* Promo end */
+
+/* service */
+.service {
+  padding-inline: 5rem;
+}
+
+.service .content {
+  padding-top: 3rem;
+}
+.service img {
+  width: 30%;
+  height: fit-content;
+}
+.service h2 {
+  font-size: 3em;
+  color: #412496;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.service h4 {
+  color: #412496;
+}
+
+.service .ExcelentCars {
+  width: 55%;
+  height: fit-content;
+}
+/* service End */
+
+/* List Car Start */
+.carlist {
+  margin-top: 5em;
+}
+
+.carlist h4 {
+  color: #412496;
+}
+
+.carlist.card {
+  width: 100%;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.card-text {
+  font-size: 2em;
+  color: #412496;
+}
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.btn-kl {
+  background-color: #412496;
+}
+/* List Car End */
+
+/* Gallery */
+.gallery {
+  padding-inline: 10rem;
+}
+.gallery h2 {
+  color: #412496;
+}
+.img {
+  width: 100%;
+  height: 30vh;
+}
+
+.imgbesar {
+  width: 100%;
+  height: 60vh;
+}
+
+/* Gallery end */
+
+/* Driver */
+.driver img {
+  width: 60%;
+  height: 100%;
+}
+
+.driver h2 {
+  color: #412496;
+}
+/* Driver end */
+
+/* Footer */
+.Footer {
+  margin-top: 10rem;
+  background-color: #412496;
+}
+.Footercontact {
+  margin-left: 4rem;
+  margin-top: 6rem;
+}
+/* Footer End */
