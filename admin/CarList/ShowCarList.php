@@ -56,7 +56,7 @@
             <a class="btn btn-success" href="FormCarList.php">Tambah Mobil</a>
         </div> -->
         </div>
-        <table class="table table-bordered text-center mt-2">
+        <table class="table table-bordered text-center mt-2 form">
             <tr>
                 <th>No</th>
                 <th>Id</th>
@@ -95,7 +95,7 @@
         </table>
         <div class="row">
             <div class="d-flex align-items-end justify-content-end">
-                <a href="cetakLaporan.php" class="btn btn-primary">
+                <a href="cetakLaporan.php" class="btn btn-success" A>
                     Cetak
                 </a>
             </div>

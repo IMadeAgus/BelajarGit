@@ -86,7 +86,7 @@ ul li a.nav-link:hover {
 
 .Promo .content {
   max-width: 60rem;
-  margin: 0 auto;
+  margin: 0 auto; /* Menengahkan konten */
 }
 
 .Promo .content h1 {
@@ -96,13 +96,14 @@ ul li a.nav-link:hover {
 }
 /* Promo end */
 
-/* service */
-.service {
-  padding-inline: 5rem;
-}
+/* Halaman About */
 
-.service .content {
-  padding-top: 3rem;
+/* Halaman About end */
+
+/* service */
+.service .ExcelentCars {
+  width: 55%;
+  height: fit-content;
 }
 .service img {
   width: 30%;
@@ -118,10 +119,6 @@ ul li a.nav-link:hover {
   color: #412496;
 }
 
-.service .ExcelentCars {
-  width: 55%;
-  height: fit-content;
-}
 /* service End */
 
 /* List Car Start */
@@ -133,7 +130,7 @@ ul li a.nav-link:hover {
   color: #412496;
 }
 
-.carlist.card {
+.card {
   width: 100%;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
@@ -143,7 +140,6 @@ ul li a.nav-link:hover {
   color: #412496;
 }
 .card-img-top {
-  width: 100%;
   height: 200px;
   object-fit: cover;
 }
@@ -154,9 +150,6 @@ ul li a.nav-link:hover {
 /* List Car End */
 
 /* Gallery */
-.gallery {
-  padding-inline: 10rem;
-}
 .gallery h2 {
   color: #412496;
 }

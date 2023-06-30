@@ -12,13 +12,13 @@
     <!-- CSS Custom -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- Aos -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- link swetalert2 -->
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top  navbar-custom ">
+    <nav class="navbar navbar-expand-lg sticky-top  navbar-custom ">
         <div class="container py-2">
             <a class="navbar-brand fw-bold text-white d-flex align-items-center " href="#">
                 <img src="img/logo.png" width="50" height="50" class="navbar-logo" alt="">
@@ -90,17 +90,17 @@
     <section class="Promo">
         <main class="content text-white ">
             <h1 class="fw-bold">Bravo Rent Car Best Offers</h1>
-            <h4 class="mt-4">* Free Airport Pickup for an Elevated Experience</h4>
-            <h4 class="mt-4">* Get free one cup of Luwak coffee in coffee plantation</h4>
-            <h4 class="mt-4">* Get free banana boat for one person (If book more then two days).</h4>
+            <h5 class="mt-4">* Free Airport Pickup for an Elevated Experience</h5>
+            <h5 class="mt-4">* Get free one cup of Luwak coffee in coffee plantation</h5>
+            <h5 class="mt-4">* Get free banana boat for one person (If book more then two days).</h5>
         </main>
     </section>
     <!--//End Promo session -->
 
     <!-- Service -->
-    <div class=" service container my-5">
+    <div class="container service my-5">
         <h2 class="fw-bold text-center">Service</h2>
-        <div class="row content ">
+        <div class="row mt-5 ">
             <div class="col-4">
                 <div class="d-flex justify-content-center align-items-center">
                     <img src="img/Driver.png" alt="">
@@ -182,6 +182,7 @@
                         alt="..." />
                     <div class="card-body">
                         <h5 class="card-title fw-bold"><?php echo $hasil['Merek']." -".$hasil['TipeMobil'];?></h5>
+                        <h5></h5>
                         <p class="card-text fw-semibold">
                             IDR <?php echo $hasil['Harga'];?>
                         </p>
@@ -201,10 +202,12 @@
         </div>
     </div>
     <!-- //End List Car session -->
-
+    <br>
+    <br>
+    <br>
     <!-- GALLERY -->
     <div class="container gallery">
-        <h2 class="fw-bold  my-5">GALLERY</h2>
+        <h2 class="fw-bold  mb-5">GALLERY</h2>
         <table>
             <!-- Baris 1 -->
             <tr>
