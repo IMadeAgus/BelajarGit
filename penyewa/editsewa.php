@@ -1,36 +1,34 @@
 <?php
-// include 'koneksi.php';
+include 'koneksi.php';
 
-// if(isset($_POST['ubah'])){
-    
-//     $name_p = $_FILES['FotoMobil']['name'];
-//     $sumber_p = $_FILES['FotoMobil']['tmp_name'];
-//     move_uploaded_file($sumber_p, $folder. $name_p);
-//     $id = $_POST['id'];
-//     $MerekMobil = $_POST['MerekMobil'];
-//     $TipeMobil = $_POST['TipeMobil'];
-//     $Deskripsi = $_POST['Deskripsi'];
-//     $Harga = $_POST['Harga'];
-//     $sql = "UPDATE tbmobil
-//                 SET Merek='$MerekMobil', 
-//                     TipeMobil='$TipeMobil', 
-//                     PlatNomer='$Deskripsi',
-//                     FotoMobil='$name_p', 
-//                     Harga='$Harga' 
-//                 WHERE id='$id'";
-//     $query = mysqli_query($konek, $sql);
+if (isset($_POST['ubah'])) {
 
-//     if($query) {
-//         header("location:ShowCarList.php?pesan=update");
-//     } else {
-//         die("Perubahan Gagal Disimpan");
-//     }
-// }
-// if(isset($_POST['batal'])){
-//     header("location:ShowCarList.php");
-// }
-// else {
-//     die("Gagal terhubung dengan database!");
-// }
+  $id = $_POST['id_sewa'];
+  $nama = $_POST['nama'];
+  $no_hp = $_POST['no_hp'];
+  $no_ktp = $_POST['no_ktp'];
+  $tgl_peminjaman = $_POST['tgl_peminjaman'];
+  $tgl_pengembalian = $_POST['tgl_pengembalian'];
+  $lama_peminjaman = $_POST['lama_peminjaman'];
+  $sql = "UPDATE tb_penyewa
+                SET nama='$nama', 
+                    no_hp='$no_hp', 
+                    no_ktp='$no_ktp',
+                    tgl_peminjaman='$tgl_peminjaman', 
+                    tgl_pengembalian='$tgl_pengembalian', 
+                    lama_peminjaman='$lama_peminjaman', 
+                   
+                WHERE id_sewa='$id'";
+  $query = mysqli_query($konek, $sql);
 
-?>
+  if ($query) {
+    header("location:tampilsewa.php?pesan=update");
+  } else {
+    die("Perubahan Gagal Disimpan");
+  }
+}
+if (isset($_POST['batal'])) {
+  header("location:tampilsewa.php");
+} else {
+  die("Gagal terhubung dengan database!");
+}

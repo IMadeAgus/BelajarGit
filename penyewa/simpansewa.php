@@ -12,7 +12,7 @@ $sql = "insert into tb_penyewa values('','$nama','$no_hp','$no_ktp','$tgl_peminj
 
 $query = mysqli_query($konek, $sql);
 if ($query) {
-  echo "Data Berhasil Disimpan";
+  header("Location:tampilsewa.php");
 } else {
   echo "Data Gagal disimpan";
 }
