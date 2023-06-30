@@ -138,7 +138,7 @@
             <div class="col-lg-6 border border-3 rounded-3 form ">
 
                 <h1 class="text-center border-bottom border-dark py-4">Form Sewa</h1>
-                <form name="FormAddCars" method="post" enctype="multipart/form-data" action="simpansewa.php">
+                <form name="formsewa" method="post" enctype="multipart/form-data" action="simpansewa.php">
 
                     <div class="mx-3 ">
                         <label class="form-label mt-3">Nama</label>
@@ -157,7 +157,7 @@
                         <div class="d-flex my-5">
                             <input type="submit" class=" w-40  me-2 btn btn-danger border border-0" value="Cancel" name="batal">
                             <input type="submit" class="w-40 ms-2 btn btn-primary border border-0" value="simpan" name="simpan">
-                            <a align="right" href="tampilsewa.php" input type="submit" class="w-40 ms-2 btn btn-success border border-0" value="Tampil">Tampil Data</a>
+                            <a href="tampilsewa.php" input type="submit" class="w-40 ms-2 btn btn-success border border-0" value="Tampil">Tampil Data</a>
 
                         </div>
                 </form>
