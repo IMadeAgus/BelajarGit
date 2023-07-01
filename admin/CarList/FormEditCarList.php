@@ -11,7 +11,7 @@ if($id == null){
     header('Location: ShowCarList.php');
 }
 
-$sql = "SELECT * from tbmobil " ;
+$sql = "SELECT * from tbmobil WHERE id=$id " ;
 $query = mysqli_query($konek, $sql);
 $data = mysqli_fetch_assoc($query);
 
@@ -26,7 +26,6 @@ if( mysqli_num_rows($query) < 1 ){
 <link rel="stylesheet" href="css/bootstrap.css" />
 
 <body>
-
     <div class="container-fluid vh-100">
         <!-- flex-container -->
         <div class="row d-flex h-100  justify-content-center align-content-center">
@@ -38,8 +37,6 @@ if( mysqli_num_rows($query) < 1 ){
                     <input type="hidden" name="id" value="<?php echo $data['id'] ?>" />
                     <!-- user-input -->
                     <div class="mx-3">
-                        <label class="form-label mt-3">Merek Mobil</label>
-                        <input type="text" class="form-control" name="MerekMobil" value="<?php echo $data['Merek']?>">
                         <label class="form-label mt-3">Tipe Mobil </label>
                         <input type="text" class="form-control" name="TipeMobil"
                             value="<?php echo $data['TipeMobil']?>">
@@ -62,17 +59,3 @@ if( mysqli_num_rows($query) < 1 ){
             </div>
         </div>
     </div>
-
-
-
-
-    <header>
-        <h3>Edit List Mobil </h3>
-    </header>
-
-
-
-
-</body>
-
-</html>

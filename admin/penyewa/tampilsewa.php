@@ -2,12 +2,12 @@
 
 <head>
 
-  <tittle></tittle>
+    <tittle></tittle>
 
-  <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
 
 
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <!-- <body>
@@ -44,58 +44,58 @@
   </div> -->
 
 <div class="container">
-  <div class="row d-flex align-items-center mt-4">
-    <div class="col-4">
-      <h2>Data Penyewa</h2>
-    </div>
-    <!-- <div class="col-4"></div>
+    <div class="row d-flex align-items-center mt-4">
+        <div class="col-4">
+            <h2>Data Penyewa</h2>
+        </div>
+        <!-- <div class="col-4"></div>
         <div class="col-4 d-flex align-items-end justify-content-end">
             <a class="btn btn-success" href="FormCarList.php">Tambah Mobil</a>
         </div> -->
-  </div>
-  <table class="table table-bordered text-center mt-2">
-    <tr>
-      <th>No</th>
-      <th>Nama</th>
-      <th>No Hp</th>
-      <th>No KTP </th>
-      <th>TGl Peminjaman </th>
-      <th>TGL Pengembalian</th>
-      <th>Lama Peminjaman</th>
-      <th>Aksi</th>
-    </tr>
-    <?php
+    </div>
+    <table class="table table-bordered text-center mt-2">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>No Hp</th>
+            <th>No KTP </th>
+            <th>TGl Peminjaman </th>
+            <th>TGL Pengembalian</th>
+            <th>Lama Peminjaman</th>
+            <th>Aksi</th>
+        </tr>
+        <?php
     include 'koneksi.php';
     $no = 1;
     $sql = ("select * from tb_penyewa");
     $query = mysqli_query($konek, $sql);
     while ($data = mysqli_fetch_array($query)) {
     ?>
-      <tr class="align-middle">
-        <td><?php echo $no++; ?></td>
-        <td><?= $data['nama'] ?></td>
-        <td><?= $data['no_hp'] ?></td>
-        <td><?= $data['no_ktp'] ?></td>
-        <td><?= $data['tgl_peminjaman'] ?></td>
-        <td><?= $data['tgl_pengembalian'] ?></td>
-        <td><?= $data['lama_peminjaman'] ?></td>
-        <td>
-          <a class="btn btn-info" href="editsewa.php?id=<?php echo $data['id_sewa']; ?>">EDIT</a>
+        <tr class="align-middle">
+            <td><?php echo $no++; ?></td>
+            <td><?= $data['nama'] ?></td>
+            <td><?= $data['no_hp'] ?></td>
+            <td><?= $data['no_ktp'] ?></td>
+            <td><?= $data['tanggal_peminjaman'] ?></td>
+            <td><?= $data['tanggal_pengembalian'] ?></td>
+            <td><?= $data['lama_peminjaman'] ?></td>
+            <td>
+                <a class="btn btn-info" href="editsewa.php?id=<?php echo $data['id']; ?>">EDIT</a>
 
-          <a class="btn btn-danger" href="hapussewa.php?id=<?php echo $data['id_sewa']; ?>">HAPUS</a>
-        </td>
-      </tr>
-    <?php
+                <a class="btn btn-danger" href="hapussewa.php?id=<?php echo $data['id']; ?>">HAPUS</a>
+            </td>
+        </tr>
+        <?php
     }
     ?>
-  </table>
-  <div class="row">
-    <div class="d-flex align-items-end justify-content-end">
-      <a href="print.php" class="btn btn-success" A>
-        Cetak
-      </a>
+    </table>
+    <div class="row">
+        <div class="d-flex align-items-end justify-content-end">
+            <a href="print.php" class="btn btn-success" A>
+                Cetak
+            </a>
+        </div>
     </div>
-  </div>
 </div>
 
 </body>

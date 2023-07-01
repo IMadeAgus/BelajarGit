@@ -24,8 +24,6 @@
                 <form name="FormAddCars" method="post" enctype="multipart/form-data" action="AddCarList.php">
                     <!-- user-input -->
                     <div class="mx-3 ">
-                        <label class="form-label mt-3">Merek Mobil</label>
-                        <input type="text" class="form-control" name="MerekMobil">
                         <label class="form-label mt-3">Tipe Mobil </label>
                         <input type="text" class="form-control" name="TipeMobil">
                         <label class="form-label mt-3 ">Deskirpsi </label>
@@ -60,7 +58,6 @@
             <tr>
                 <th>No</th>
                 <th>Id</th>
-                <th>Merek Mobil </th>
                 <th>Tipe Mobil </th>
                 <th>Deskripsi</th>
                 <th>Foto Mobil</th>
@@ -77,15 +74,14 @@
             <tr class="align-middle">
                 <td><?php echo $no++; ?></td>
                 <td><?=$data['id']?></td>
-                <td><?=$data['Merek']?></td>
                 <td><?=$data['TipeMobil']?></td>
                 <td><?=$data['Deskripsi']?></td>
                 <td><img src="mobil/<?=$data['FotoMobil']?>" alt="" style="max-width: 100px; max-height: 150px"></td>
                 <td><?=$data['Harga']?></td>
                 <td>
-                    <a class="btn btn-info" href="FormEditCarList.php?id=<?php echo $data['id']; ?>">EDIT</a>
+                    <a class="btn btn-info" href="FormEditCarList.php?id='<?php echo $data['id'];?>'">EDIT</a>
 
-                    <a class="btn btn-danger" href="DeleteCarList.php?id=<?php echo $data['id']; ?>"
+                    <a class="btn btn-danger" href="DeleteCarList.php?id=<?php echo $data['id'];?>"
                         onclick="return confirm('Yakin mau Hapus?')">HAPUS</a>
                 </td>
             </tr>

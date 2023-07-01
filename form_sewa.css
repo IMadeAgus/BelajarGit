@@ -1,6 +1,40 @@
-body {
+/* body {
   background-image: url("img/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+} */
+/* Navbar */
+ul li a.nav-link {
+  color: #ffffff;
 }
+
+ul li a.nav-link:hover {
+  font-weight: bold;
+  color: #fff;
+}
+.navbar-custom {
+  width: 100%;
+  height: 10vh;
+  left: 0px;
+  top: 0px;
+  background: #412496;
+}
+.navbar-logo {
+  margin-right: 0.5rem;
+}
+/* Navbar End */
+
+.form {
+  margin-top: 15rem;
+}
+
+/* Footer */
+.Footer {
+  margin-top: 20rem;
+  background-color: #412496;
+}
+.Footercontact {
+  margin-left: 4rem;
+  margin-top: 6rem;
+}
+/* Footer End */

@@ -7,14 +7,12 @@ if(isset($_POST['ubah'])){
     $sumber_p = $_FILES['FotoMobil']['tmp_name'];
     move_uploaded_file($sumber_p, $folder. $name_p);
     $id = $_POST['id'];
-    $MerekMobil = $_POST['MerekMobil'];
     $TipeMobil = $_POST['TipeMobil'];
     $Deskripsi = $_POST['Deskripsi'];
     $Harga = $_POST['Harga'];
     $sql = "UPDATE tbmobil
-                SET Merek='$MerekMobil', 
-                    TipeMobil='$TipeMobil', 
-                    PlatNomer='$Deskripsi',
+                SET TipeMobil='$TipeMobil', 
+                    Deskripsi='$Deskripsi',
                     FotoMobil='$name_p', 
                     Harga='$Harga' 
                 WHERE id='$id'";

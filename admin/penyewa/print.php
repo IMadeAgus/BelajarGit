@@ -32,8 +32,8 @@ while ($d = mysqli_fetch_array($data)) {
   $pdf->Cell(30, 6, $d['nama'], 1, 0);
   $pdf->Cell(30, 6, $d['no_hp'], 1, 0);
   $pdf->Cell(30, 6, $d['no_ktp'], 1, 0);
-  $pdf->Cell(30, 6, $d['tgl_peminjaman'], 1, 0);
-  $pdf->Cell(30, 6, $d['tgl_pengembalian'], 1, 0);
+  $pdf->Cell(30, 6, $d['tanggal_peminjaman'], 1, 0);
+  $pdf->Cell(30, 6, $d['tanggal_pengembalian'], 1, 0);
   $pdf->Cell(30, 6, $d['lama_peminjaman'], 1, 1);
 }
 

@@ -37,7 +37,7 @@
                         <a class="nav-link" href="#CarList">CAR LIST</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">ORDER LIST</a>
+                        <a class="nav-link" href="orderlist.php">ORDER LIST</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">GALLERY</a>
@@ -181,12 +181,12 @@
                     <img src="admin/CarList/mobil/<?php echo $hasil['FotoMobil'];?>" class="card-img-top img-fluid"
                         alt="..." />
                     <div class="card-body">
-                        <h5 class="card-title fw-bold"><?php echo $hasil['Merek']." -".$hasil['TipeMobil'];?></h5>
+                        <h5 class="card-title fw-bold"><?php echo $hasil['TipeMobil'];?></h5>
                         <p class="card-text fw-semibold">
                             IDR <?php echo $hasil['Harga'];?>
                         </p>
                         <p><?php echo $hasil['Deskripsi'];?></p>
-                        <a href="formsewa.php" class="btn tombol">Order Now</a>
+                        <a class="btn tombol" href="formsewauser.php?id='<?php echo $hasil['id'];?>'">Order Now</a>
                     </div>
                 </div>
             </div>

@@ -23,8 +23,6 @@
                 <form name="FormAddCars" method="post" enctype="multipart/form-data" action="AddCarList.php">
                     <!-- user-input -->
                     <div class="mx-3">
-                        <label class="form-label mt-3">Merek Mobil</label>
-                        <input type="text" class="form-control" name="MerekMobil">
                         <label class="form-label mt-3">Tipe Mobil </label>
                         <input type="text" class="form-control" name="TipeMobil">
                         <label class="form-label mt-3 ">Deskirpsi </label>
@@ -35,8 +33,10 @@
                         <input type="number" class="form-control" name="Harga">
                         <!-- Button -->
                         <div class="d-flex my-5">
-                            <input type="submit" class=" w-50  me-2 btn btn-danger border border-0" value="Cancel" name="batal">
-                            <input type="submit" class="w-50 ms-2 btn btn-primary border border-0" value="simpan" name="simpan">
+                            <input type="submit" class=" w-50  me-2 btn btn-danger border border-0" value="Cancel"
+                                name="batal">
+                            <input type="submit" class="w-50 ms-2 btn btn-primary border border-0" value="simpan"
+                                name="simpan">
                         </div>
                 </form>
             </div>

@@ -155,9 +155,12 @@
                         <input type="number" class="form-control" name="lama_peminjaman">
 
                         <div class="d-flex my-5">
-                            <input type="submit" class=" w-40  me-2 btn btn-danger border border-0" value="Cancel" name="batal">
-                            <input type="submit" class="w-40 ms-2 btn btn-primary border border-0" value="simpan" name="simpan">
-                            <a href="tampilsewa.php" input type="submit" class="w-40 ms-2 btn btn-success border border-0" value="Tampil">Tampil Data</a>
+                            <input type="submit" class=" w-40  me-2 btn btn-danger border border-0" value="Cancel"
+                                name="batal">
+                            <input type="submit" class="w-40 ms-2 btn btn-primary border border-0" value="simpan"
+                                name="simpan">
+                            <a href="tampilsewa.php" input type="submit"
+                                class="w-40 ms-2 btn btn-success border border-0" value="Tampil">Tampil Data</a>
 
                         </div>
                 </form>
