@@ -11,34 +11,39 @@
     <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/adminstyles.css" rel="stylesheet" />
+    <!-- Feather Icons -->
+    <script script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar-->
-        <div class="border-end bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-light">
-                Start Bootstrap
+        <div class="border-end text-white " style="background-color: #412496;" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom">
+                BRAVO RENT CAR
             </div>
-            <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+            <div class="list-group list-group-flush ">
+                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
+                    href="#!">Dashboard</a>
+                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
                     href="Carlist/ShowCarList.php">CarList</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                <a class="list-group-item list-group-item-action  text-white  p-3" style="background-color: #412496;"
                     href="penyewa/tampilsewa.php">OrderList</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
                     href="#!">TransactionList</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+                <a class="list-group-item list-group-item-action  text-white  p-3" style="background-color: #412496;"
+                    href="#!">Profile</a>
+                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
+                    href="#!">Status</a>
             </div>
         </div>
         <!-- Page content wrapper-->
         <div id="page-content-wrapper">
             <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #412496;">
                 <div class="container-fluid">
-                    <button class="btn btn-primary" id="sidebarToggle">
-                        Toggle Menu
+                    <button class="btn text-white" id="sidebarToggle">
+                        <span><i data-feather="list"></i></span>
                     </button>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -47,11 +52,11 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#!">Home</a>
+                            <li class="nav-item active  ">
+                                <a class="nav-link text-white" href="#!">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#!">Log Out</a>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white" href="#!">Log Out</a>
                             </li>
                         </ul>
                     </div>
@@ -68,6 +73,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/adminscripts.js"></script>
+    <script>
+    feather.replace()
+    </script>
 </body>
 
 </html>

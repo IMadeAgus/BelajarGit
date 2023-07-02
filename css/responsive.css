@@ -58,6 +58,14 @@
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 575.98px) {
+  .navbar-brand img {
+    height: 40px;
+    width: 40px;
+  }
+  .navbar-brand {
+    font-size: 18px;
+  }
+
   .hero .content h1 {
     font-size: 45px;
   }
