@@ -78,16 +78,13 @@
                 <th>TGl Peminjaman </th>
                 <th>TGL Pengembalian</th>
                 <th>Lama Peminjaman</th>
-                <th>Total Harga</th>
-                <th>Total Pembayaran</th>
                 <th>Aksi</th>
             </tr>
             <?php
     include 'koneksi.php';
     $no = 1;
-    $sql = ("SELECT tbpengembalian.*,  tb_penyewa.nama,tb_penyewa.no_hp,tb_penyewa.no_ktp,tb_penyewa.tanggal_peminjaman,tb_penyewa.tanggal_pengembalian,tb_penyewa.lama_peminjaman,tbmobil.TipeMobil,tbmobil.Harga
-    FROM tbpengembalian
-    JOIN tb_penyewa ON tbpengembalian.penyewa_id=tb_penyewa.id
+    $sql = ("SELECT tb_penyewa.*,tbmobil.TipeMobil, tbmobil.Harga
+    FROM tb_penyewa
     JOIN tbmobil ON tb_penyewa.mobil_id = tbmobil.id;");
     $query = mysqli_query($konek, $sql);
     while ($data = mysqli_fetch_array($query)) {
@@ -102,8 +99,6 @@
                 <td><?= $data['tanggal_peminjaman'] ?></td>
                 <td><?= $data['tanggal_pengembalian'] ?></td>
                 <td><?= $data['lama_peminjaman'] ?></td>
-                <td><?= $data['TotalHarga'] ?></td>
-                <td><?= $data['TotalPembayaran'] ?></td>
 
                 <td>
                     <a class="btn btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Pay</a>

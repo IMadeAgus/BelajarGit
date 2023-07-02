@@ -85,10 +85,10 @@
             <?php
     include 'koneksi.php';
     $no = 1;
-    $sql = ("SELECT tbpengembalian.*, tbmobil.TipeMobil, tbmobil.Harga , tb_penyewa.nama,tb_penyewa.no_hp,tb_penyewa.no_ktp,tb_penyewa.tanggal_peminjaman,tb_penyewa.tanggal_pengembalian,tb_penyewa.lama_pengembalian
+    $sql = ("SELECT tbpengembalian.*,  tb_penyewa.nama,tb_penyewa.no_hp,tb_penyewa.no_ktp,tb_penyewa.tanggal_peminjaman,tb_penyewa.tanggal_pengembalian,tb_penyewa.lama_peminjaman,tbmobil.TipeMobil,tbmobil.Harga
     FROM tbpengembalian
     JOIN tb_penyewa ON tbpengembalian.penyewa_id=tb_penyewa.id
-    JOIN tbmobil ON tb_penyewa.mobil_id=tbmobil.id;");
+    JOIN tbmobil ON tb_penyewa.mobil_id = tbmobil.id;");
     $query = mysqli_query($konek, $sql);
     while ($data = mysqli_fetch_array($query)) {
     ?>
