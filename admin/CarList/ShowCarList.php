@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/adminstyles.css" rel="stylesheet" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../css/responsive.css">
     <!-- Feather Icons -->
     <script script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -26,7 +28,7 @@
             </div>
             <div class="list-group list-group-flush ">
                 <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
-                    href="#!">Dashboard</a>
+                    href="../index.php">Dashboard</a>
                 <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
                     href="Carlist/ShowCarList.php">CarList</a>
                 <a class="list-group-item list-group-item-action  text-white  p-3" style="background-color: #412496;"
@@ -45,12 +47,12 @@
             <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #412496;">
                 <div class="container-fluid">
                     <button class="btn text-white" id="sidebarToggle">
-                        <span><i data-feather="list"></i></span>
+                        <span><i data-feather="toggle-left"></i></span>
                     </button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span><i data-feather="list"></i></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
@@ -83,7 +85,7 @@
                                 <label class="form-label mt-3 ">Harga</label>
                                 <input type="number" class="form-control" name="Harga">
                                 <!-- Button -->
-                                <div class="d-flex my-5">
+                                <div class="d-flex  my-5">
                                     <input type="submit" class=" w-50  me-2 btn btn-danger border border-0"
                                         value="Cancel" name="batal">
                                     <input type="submit" class="w-50 ms-2 btn btn-primary border border-0"
@@ -93,72 +95,67 @@
                     </div>
                 </div>
 
-                <div class="container">
-                    <div class="row d-flex align-items-center mt-4">
-                        <div class="col-4">
-                            <h2>Manage Car List</h2>
-                        </div>
-                    </div>
-                    <table class="table table-bordered text-center mt-1 form">
-                        <tr>
-                            <th>No</th>
-                            <th>Id</th>
-                            <th>Tipe Mobil </th>
-                            <th>Deskripsi</th>
-                            <th>Foto Mobil</th>
-                            <th>Harga</th>
-                            <th>Aksi</th>
-                        </tr>
-                        <?php 
-		include 'koneksi.php';
-		$no = 1;
-        $sql= ("select * from tbmobil");
-		$query = mysqli_query($konek,$sql);
-		while($data = mysqli_fetch_array($query)){
-			?>
-                        <tr class="align-middle">
-                            <td><?php echo $no++; ?></td>
-                            <td><?=$data['id']?></td>
-                            <td><?=$data['TipeMobil']?></td>
-                            <td><?=$data['Deskripsi']?></td>
-                            <td><img src="mobil/<?=$data['FotoMobil']?>" alt=""
-                                    style="max-width: 100px; max-height: 150px"></td>
-                            <td><?=$data['Harga']?></td>
-                            <td>
-                                <a class="btn btn-info"
-                                    href="FormEditCarList.php?id='<?php echo $data['id'];?>'">EDIT</a>
 
-                                <a class="btn btn-danger" href="DeleteCarList.php?id=<?php echo $data['id'];?>"
-                                    onclick="return confirm('Yakin mau Hapus?')">HAPUS</a>
-                            </td>
-                        </tr>
-                        <?php 
-		}
-		?>
-                    </table>
-                    <div class="row">
-                        <div class="d-flex align-items-end justify-content-end">
-                            <a href="cetakLaporan.php" class="btn btn-success" A>
-                                Cetak
-                            </a>
-                        </div>
+                <div class="row d-flex align-items-center mt-4">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h2>Manage Car List</h2>
+                    </div>
+                </div>
+                <table class="table table-bordered text-center mt-1 form">
+                    <tr>
+                        <th>No</th>
+                        <th>Id</th>
+                        <th>Tipe Mobil </th>
+                        <th>Deskripsi</th>
+                        <th>Foto Mobil</th>
+                        <th>Harga</th>
+                        <th>Aksi</th>
+                    </tr>
+                    <?php 
+		            include 'koneksi.php';
+		                $no = 1;
+                        $sql= ("select * from tbmobil");
+		                $query = mysqli_query($konek,$sql);
+		                while($data = mysqli_fetch_array($query)){
+			                ?>
+                    <tr class="align-middle">
+                        <td><?php echo $no++; ?></td>
+                        <td><?=$data['id']?></td>
+                        <td><?=$data['TipeMobil']?></td>
+                        <td><?=$data['Deskripsi']?></td>
+                        <td><img src="mobil/<?=$data['FotoMobil']?>" alt="" style="max-width: 100px; max-height: 150px">
+                        </td>
+                        <td><?=$data['Harga']?></td>
+                        <td>
+                            <a class="btn btn-info" href="FormEditCarList.php?id='<?php echo $data['id'];?>'">EDIT</a>
+
+                            <a class="btn btn-danger" href="DeleteCarList.php?id=<?php echo $data['id'];?>"
+                                onclick="return confirm('Yakin mau Hapus?')">HAPUS</a>
+                        </td>
+                    </tr>
+                    <?php }?>
+                </table>
+                <div class="row">
+                    <div class="d-flex align-items-end justify-content-end">
+                        <a href="cetakLaporan.php" class="btn btn-success" A>
+                            Cetak
+                        </a>
                     </div>
                 </div>
 
-
-
+                </disv>
             </div>
         </div>
-    </div>
-    <script src="js/bootstrap.bundle.js"></script>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/adminscripts.js"></script>
+</body>
+<script src="js/bootstrap.bundle.js"></script>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/adminscripts.js"></script>
 
-    <script>
-    feather.replace()
-    </script>
+<script>
+feather.replace()
+</script>
 </body>
 
 </html>

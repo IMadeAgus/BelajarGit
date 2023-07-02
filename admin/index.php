@@ -11,6 +11,8 @@
     <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> -->
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/adminstyles.css" rel="stylesheet" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
     <!-- Feather Icons -->
     <script script src="https://unpkg.com/feather-icons"></script>
 </head>
@@ -43,12 +45,12 @@
             <nav class="navbar navbar-expand-lg border-bottom" style="background-color: #412496;">
                 <div class="container-fluid">
                     <button class="btn text-white" id="sidebarToggle">
-                        <span><i data-feather="list"></i></span>
+                        <span><i data-feather="toggle-left"></i></span>
                     </button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span><i data-feather="list"></i></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
