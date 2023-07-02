@@ -2,7 +2,7 @@
 include 'config.php';
 
 if(!isset($_GET['id'])){
-    header('Location : ');
+    echo "gagal";
 }
 $id = $_GET['id'];
 
@@ -10,7 +10,7 @@ if($id == null){
     header('Location : ');
 }
 
-$sql   = "SELECT * FROM tbtransaksi ";
+$sql   = "SELECT * FROM tbtransaksi WHERE id = $id ";
 $query = mysqli_query($koneksi, $sql);
 $data  = mysqli_fetch_assoc($query);
 
@@ -26,8 +26,7 @@ if(mysqli_num_rows($query)<1){
 </header>
 
 <form name="FormEditTransaksi" action="editTransaksi.php" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="id" value="<?php $data['id'] ?>">
-
+    <input type="hidden" name="id" value="<?php echo $id ?>">
     <table>
         <tr>
             <td>Nama</td>
