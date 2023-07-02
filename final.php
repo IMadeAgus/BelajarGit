@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- Css Responsive -->
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
     <!-- Aos -->
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- link swetalert2 -->
@@ -20,17 +22,18 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top  navbar-custom ">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top  navbar-light" style="background-color: #412496;">
         <div class="container-fluid py-2">
             <a class="navbar-brand fw-bold text-white d-flex align-items-center " href="#">
                 <img src="img/logo.png" width="50" height="50" class="navbar-logo" alt="">
                 BRAVO RENT CAR
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span><i data-feather="list"></i></span>
             </button>
-            <div class="collapse navbar-collapse ">
+            <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
                         <a class="nav-link" href="#">HOME</a>
@@ -307,9 +310,12 @@
 
     <!--  -->
 
-
     <!-- Bootsrap js -->
     <script src="js/bootstrap.bundle.js"></script>
+    <!-- Feather Icons -->
+    <script>
+    feather.replace()
+    </script>
 </body>
 
 </html>
