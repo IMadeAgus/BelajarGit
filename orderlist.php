@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'koneksi.php';?>
+<?php include 'koneksi.php'; ?>
 
 <head>
     <meta charset="UTF-8">
@@ -20,29 +20,28 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top  navbar-custom ">
-        <div class="container py-2">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top  navbar-light" style="background-color: #412496;">
+        <div class="container-fluid py-2">
             <a class="navbar-brand fw-bold text-white d-flex align-items-center " href="#">
                 <img src="img/logo.png" width="50" height="50" class="navbar-logo" alt="">
                 BRAVO RENT CAR
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i data-feather="list"></i></span>
             </button>
-            <div class="collapse navbar-collapse ">
+            <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
-                        <a class="nav-link" href="final.php">HOME</a>
+                        <a class="nav-link" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="final.php">CAR LIST</a>
+                        <a class="nav-link" href="#CarList">CAR LIST</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">ORDER LIST</a>
+                        <a class="nav-link" href="orderlist.php">ORDER LIST</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">GALLERY</a>
+                        <a class="nav-link" href="gallery.php">GALLERY</a>
                     </li>
                     <li>
                         <a class="nav-link" href="logout.php" onclick="return confirm('Yakin mau Log Out?')">LOG
@@ -81,32 +80,34 @@
                 <th>Aksi</th>
             </tr>
             <?php
-    include 'koneksi.php';
-    $no = 1;
-    $sql = ("SELECT tb_penyewa.*,tbmobil.TipeMobil, tbmobil.Harga
+            include 'koneksi.php';
+            $no = 1;
+            $sql = ("SELECT tb_penyewa.*,tbmobil.TipeMobil, tbmobil.Harga
     FROM tb_penyewa
     JOIN tbmobil ON tb_penyewa.mobil_id = tbmobil.id;");
-    $query = mysqli_query($konek, $sql);
-    while ($data = mysqli_fetch_array($query)) {
-    ?>
-            <tr class="align-middle">
-                <td><?php echo $no++; ?></td>
-                <td><?= $data['nama'] ?></td>
-                <td><?= $data['no_hp'] ?></td>
-                <td><?= $data['no_ktp'] ?></td>
-                <td><?= $data['TipeMobil'] ?></td>
-                <td><?= $data['Harga'] ?></td>
-                <td><?= $data['tanggal_peminjaman'] ?></td>
-                <td><?= $data['tanggal_pengembalian'] ?></td>
-                <td><?= $data['lama_peminjaman'] ?></td>
+            $query = mysqli_query($konek, $sql);
+            while ($data = mysqli_fetch_array($query)) {
+            ?>
+                <tr class="align-middle">
+                    <td><?php echo $no++; ?></td>
+                    <td><?= $data['nama'] ?></td>
+                    <td><?= $data['no_hp'] ?></td>
+                    <td><?= $data['no_ktp'] ?></td>
+                    <td><?= $data['TipeMobil'] ?></td>
+                    <td><?= $data['Harga'] ?></td>
+                    <td><?= $data['tanggal_peminjaman'] ?></td>
+                    <td><?= $data['tanggal_pengembalian'] ?></td>
+                    <td><?= $data['lama_peminjaman'] ?></td>
 
-                <td>
-                    <a class="btn btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Pay</a>
-                </td>
-            </tr>
+                    <td>
+                        <a class="btn btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Pay</a>
+                        <a class="btn btn-success" href="formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
+
+                    </td>
+                </tr>
             <?php
-    }
-    ?>
+            }
+            ?>
         </table>
         <!-- <div class="row">
             <div class="d-flex align-items-end justify-content-end">
