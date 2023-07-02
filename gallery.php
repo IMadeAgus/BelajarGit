@@ -1,24 +1,23 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<?php include 'koneksi.php';?>
 
 <head>
-    <?php include 'koneksi.php'; ?>
-    <tittle>
-        <link rel="stylesheet" href="css/bootstrap.css" />
-        <link rel="stylesheet" href="form_sewa.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Sewa Mobil</title>
+    <!-- Bootsrap -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Aos -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- link swetalert2 -->
 </head>
-</tittle>
-
-<?php 
-$id=$_GET['id'];
-$sql= mysqli_query($konek, "SELECT tb_penyewa.*, tbmobil.TipeMobil, tbmobil.Harga
-FROM tb_penyewa 
-JOIN tbmobil ON tb_penyewa.mobil_id=tbmobil.id 
-WHERE tb_penyewa.id = $id ");
-$hasil= mysqli_fetch_assoc($sql);
-?>
 
 <body>
-    <!-- Navbar // jangan diedit-->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top  navbar-custom ">
         <div class="container py-2">
             <a class="navbar-brand fw-bold text-white d-flex align-items-center " href="#">
@@ -54,42 +53,66 @@ $hasil= mysqli_fetch_assoc($sql);
     </nav>
     <!-- //End Navbar Session -->
 
-    <div class="container ">
-        <div class="row d-flex h-100 justify-content-center align-content-center">
-            <div class="col-lg-6 border border-3 rounded-3 form bg-white form">
-                <h1 class="text-center border-bottom border-dark py-4">Form Bayar</h1>
-                <form name="formsewa" method="post" enctype="multipart/form-data" action="simpanbayaruser.php">
-                    <div class="mx-3 ">
-                        <label class="form-label mt-3 ">Tipe Mobil </label>
-                        <input class="form-control" value="<?php echo $hasil['TipeMobil']?>" readonly>
-                        <label class="form-label mt-3">Nama</label>
-                        <input type="text" class="form-control" value="<?php echo $hasil['nama']?>" readonly>
-                        <label class="form-label mt-3"> Harga : </label>
-                        <input type="number" class="form-control" value="<?php echo $hasil['Harga']?>" readonly>
-                        <label class="form-label mt-3 ">Tanggal Peminjaman </label>
-                        <input type="date" class="form-control" value="<?php echo $hasil['tanggal_peminjaman']?>"
-                            readonly>
-                        <label class="form-label mt-3 ">Tanggal Pengembalian</label>
-                        <input type="date" class="form-control" value="<?php echo $hasil['tanggal_pengembalian']?>"
-                            readonly>
-                        <label class="form-label mt-3 ">Lama Peminjaman(Hari)</label>
-                        <input type="number" class="form-control" value="<?php echo $hasil['lama_peminjaman']?>"
-                            readonly>
-                        <label class="form-label mt-3 ">Total Harga</label>
-                        <input type="number" class="form-control"
-                            value="<?php echo $hasil['lama_peminjaman']*$hasil['Harga']?>" name="TotalHarga" readonly>
-                        <label class="form-label mt-3 ">Total Pembayaran</label>
-                        <input type="number" class="form-control" name="TotalPembayaran">
-                        <input type="hidden" name="id" value="<?php echo $id;?>" />
-                        <div class="d-flex my-5 justify-content-end">
-                            <input type="reset" class=" w-40  me-2 btn btn-danger border border-0" value="Cancel">
-                            <input type="submit" class="w-40 ms-2 btn btn-primary border border-0" value="Submit">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
+    <!-- GALLERY -->
+    <div class="container gallery">
+        <h2 class="fw-bold  my-5">GALLERY</h2>
+        <table>
+            <!-- Baris 1 -->
+            <tr>
+                <td>
+                    <img class="img" src="img/Promo.jpg" alt="">
+                </td>
+                <td>
+                    <img class="img" src="img/Promo.jpg" alt="">
+                </td>
+                <td rowspan="2" colspan="2">
+                    <img class="imgbesar" src="img/Promo.jpg" alt="">
+                </td>
+                <td></td>
+            </tr>
+            <!-- Baris 2 -->
+            <tr>
+                <td>
+                    <img class="img" src="img/Driver.png" alt="">
+                </td>
+                <td>
+                    <img class="img" src="img/Driver.png" alt="">
+                </td>
+            </tr>
+            <!-- Baris 3 -->
+            <tr>
+                <td rowspan="2">
+                    <img class="imgbesar" src="img/OnTime.png" alt="">
+                </td>
+                <td>
+                    <img class="img" src="img/Driver.png" alt="">
+                </td>
+                <td>
+                    <img class="img" src="img/Driver.png" alt="">
+                </td>
+                <td>
+                    <img class="img" src="img/Driver.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img class="img" src="img/Driver.png" alt="">
+                </td>
+                <td>
+                    <img class="img" src="img/Driver.png" alt="">
+                </td>
+                <td>
+                    <img class="img" src="img/Driver.png" alt="">
+                </td>
+            </tr>
+        </table>
     </div>
+
+    <!-- //end GALLERY session -->
+
+
+
+
 
     <!-- Footer -->
     <section class="Footer ">
@@ -129,4 +152,10 @@ $hasil= mysqli_fetch_assoc($sql);
     </section>
 
     <!--  -->
+
+
+    <!-- Bootsrap js -->
+    <script src="js/bootstrap.bundle.js"></script>
 </body>
+
+</html>

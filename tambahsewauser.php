@@ -12,7 +12,7 @@ $sql = "insert into tb_penyewa values('','$mobil_id','$nama','$no_hp','$no_ktp',
 
 $query = mysqli_query($konek, $sql);
 if ($query) {
-  header("Location:tampilsewa.php");
+  header("Location:orderlist.php");
 } else {
   echo "Data Gagal disimpan";
 }

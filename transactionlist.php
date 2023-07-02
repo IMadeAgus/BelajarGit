@@ -1,24 +1,22 @@
-<html>
-
-<head>
-    <?php include 'koneksi.php'; ?>
-    <tittle>
-        <link rel="stylesheet" href="css/bootstrap.css" />
-        <link rel="stylesheet" href="form_sewa.css">
-</head>
-</tittle>
-
-<?php 
-$id=$_GET['id'];
-$sql= mysqli_query($konek, "SELECT * FROM tbmobil WHERE id = $id");
-$hasil= mysqli_fetch_assoc($sql);
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'koneksi.php';?>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Sewa Mobil</title>
+    <!-- Bootsrap -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- CSS Responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Aos -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- link swetalert2 -->
+</head>
 
 <body>
     <!-- Navbar -->
@@ -58,44 +56,70 @@ $hasil= mysqli_fetch_assoc($sql);
     <!-- //End Navbar Session -->
 
     <!-- Table Order List -->
-    <div class="container ">
 
-        <div class="row d-flex h-100 justify-content-center align-content-center">
-
-            <div class="col-lg-6 border border-3 rounded-3 form bg-white form">
-
-                <h1 class="text-center border-bottom border-dark py-4">Form Sewa</h1>
-                <form name="formsewa" method="post" enctype="multipart/form-data" action="tambahsewauser.php">
-
-                    <div class="mx-3 ">
-                        <input type="hidden" name="id" value="<?php echo $hasil['id'] ?>" />
-                        <label class="form-label mt-3 ">Tipe Mobil </label>
-                        <input class="form-control" value="<?php echo $hasil['TipeMobil']?>" readonly>
-                        <label class="form-label mt-3">Nama</label>
-                        <input type="text" class="form-control" name="nama">
-                        <label class="form-label mt-3">No Hp </label>
-                        <input type="text" class="form-control" name="no_hp">
-                        <label class="form-label mt-3 ">No KTP </label>
-                        <input type="text" class="form-control" name="no_ktp">
-                        <label class="form-label mt-3 ">Harga (hari) </label>
-                        <input class="form-control" value="<?php echo $hasil['Harga']?>" readonly>
-                        <label class="form-label mt-3 ">Tanggal Peminjaman</label>
-                        <input type="date" class="form-control" name="tanggal_peminjaman">
-                        <label class="form-label mt-3 ">Tanggal Pengembalian</label>
-                        <input type="date" class="form-control" name="tanggal_pengembalian">
-                        <label class="form-label mt-3 ">Lama Peminjaman(Hari)</label>
-                        <input type="number" class="form-control" name="lama_peminjaman">
-                        <a href=""></a>
-                        <div class="d-flex my-5 justify-content-end">
-                            <a class=" w-40  me-2 btn btn-danger border border-0" href="final.php">Cancel</a>
-                            <input type="submit" class="w-40 ms-2 btn btn-primary border border-0" value="Order"
-                                name="simpan">
-                        </div>
-                    </div>
-                </form>
+    <div class="container">
+        <div class="row d-flex align-items-center mt-4">
+            <div class="col-4">
+                <h2>Order List</h2>
             </div>
+            <!-- <div class="col-4"></div>
+        <div class="col-4 d-flex align-items-end justify-content-end">
+            <a class="btn btn-success" href="FormCarList.php">Tambah Mobil</a>
+        </div> -->
         </div>
+        <table class="table table-bordered text-center mt-2">
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>No Hp</th>
+                <th>No KTP </th>
+                <th>Tipe Mobil</th>
+                <th>Harga</th>
+                <th>TGl Peminjaman </th>
+                <th>TGL Pengembalian</th>
+                <th>Lama Peminjaman</th>
+                <th>Total Harga</th>
+                <th>Total Pembayaran</th>
+                <th>Aksi</th>
+            </tr>
+            <?php
+    include 'koneksi.php';
+    $no = 1;
+    $sql = ("SELECT tbpengembalian.*, tbmobil.TipeMobil, tbmobil.Harga , tb_penyewa.nama,tb_penyewa.no_hp,tb_penyewa.no_ktp,tb_penyewa.tanggal_peminjaman,tb_penyewa.tanggal_pengembalian,tb_penyewa.lama_pengembalian
+    FROM tbpengembalian
+    JOIN tb_penyewa ON tbpengembalian.penyewa_id=tb_penyewa.id
+    JOIN tbmobil ON tb_penyewa.mobil_id=tbmobil.id;");
+    $query = mysqli_query($konek, $sql);
+    while ($data = mysqli_fetch_array($query)) {
+    ?>
+            <tr class="align-middle">
+                <td><?php echo $no++; ?></td>
+                <td><?= $data['nama'] ?></td>
+                <td><?= $data['no_hp'] ?></td>
+                <td><?= $data['no_ktp'] ?></td>
+                <td><?= $data['TipeMobil'] ?></td>
+                <td><?= $data['Harga'] ?></td>
+                <td><?= $data['tanggal_peminjaman'] ?></td>
+                <td><?= $data['tanggal_pengembalian'] ?></td>
+                <td><?= $data['lama_peminjaman'] ?></td>
+                <td>
+                    <a class="btn btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Pay</a>
+                </td>
+            </tr>
+            <?php
+    }
+    ?>
+        </table>
+        <!-- <div class="row">
+            <div class="d-flex align-items-end justify-content-end">
+                <a href="print.php" class="btn btn-success" A>
+                    Cetak
+                </a>
+            </div>
+        </div> -->
     </div>
+
+
     <!-- End Tablr Order List Session -->
 
 

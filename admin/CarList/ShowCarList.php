@@ -11,95 +11,145 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/adminstyles.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="container vh-100">
-        <!-- flex-container -->
-        <div class="row d-flex h-100 justify-content-center align-content-center">
-            <!-- flex-item -->
-            <div class="col-lg-6 border border-3 rounded-3 form ">
-                <!-- Judul-form -->
-                <h1 class="text-center border-bottom border-dark py-4">Form Add Car List</h1>
-                <form name="FormAddCars" method="post" enctype="multipart/form-data" action="AddCarList.php">
-                    <!-- user-input -->
-                    <div class="mx-3 ">
-                        <label class="form-label mt-3">Tipe Mobil </label>
-                        <input type="text" class="form-control" name="TipeMobil">
-                        <label class="form-label mt-3 ">Deskirpsi </label>
-                        <input type="text" class="form-control" name="Deskripsi">
-                        <label class="form-label mt-3 ">Foto Mobil</label>
-                        <input type="file" class="form-control" name="FotoMobil">
-                        <label class="form-label mt-3 ">Harga</label>
-                        <input type="number" class="form-control" name="Harga">
-                        <!-- Button -->
-                        <div class="d-flex my-5">
-                            <input type="submit" class=" w-50  me-2 btn btn-danger border border-0" value="Cancel"
-                                name="batal">
-                            <input type="submit" class="w-50 ms-2 btn btn-primary border border-0" value="simpan"
-                                name="simpan">
-                        </div>
-                </form>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">
+                Start Bootstrap
+            </div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="../index.php">Dashboard</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="Carlist/ShowCarList.php">CarList</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3"
+                    href="penyewa/tampilsewa.php">OrderList</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
             </div>
         </div>
-    </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-primary" id="sidebarToggle">
+                        Toggle Menu
+                    </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#!">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <div class="container-fluid">
+                <div class="row d-flex h-100 justify-content-center align-content-center mx-2 ">
+                    <!-- flex-item -->
+                    <div class="col-lg-12 card form ">
+                        <!-- Judul-form -->
+                        <h1 class="text-center border-bottom border-dark py-4">Form Add Car List</h1>
+                        <form name="FormAddCars" method="post" enctype="multipart/form-data" action="AddCarList.php">
+                            <!-- user-input -->
+                            <div class="mx-3 ">
+                                <label class="form-label mt-3">Tipe Mobil </label>
+                                <input type="text" class="form-control" name="TipeMobil">
+                                <label class="form-label mt-3 ">Deskirpsi </label>
+                                <input type="text" class="form-control" name="Deskripsi">
+                                <label class="form-label mt-3 ">Foto Mobil</label>
+                                <input type="file" class="form-control" name="FotoMobil">
+                                <label class="form-label mt-3 ">Harga</label>
+                                <input type="number" class="form-control" name="Harga">
+                                <!-- Button -->
+                                <div class="d-flex my-5">
+                                    <input type="submit" class=" w-50  me-2 btn btn-danger border border-0"
+                                        value="Cancel" name="batal">
+                                    <input type="submit" class="w-50 ms-2 btn btn-primary border border-0"
+                                        value="simpan" name="simpan">
+                                </div>
+                        </form>
+                    </div>
+                </div>
 
-    <div class="container">
-        <div class="row d-flex align-items-center mt-4">
-            <div class="col-4">
-                <h2>Manage Car List</h2>
-            </div>
-            <!-- <div class="col-4"></div>
-        <div class="col-4 d-flex align-items-end justify-content-end">
-            <a class="btn btn-success" href="FormCarList.php">Tambah Mobil</a>
-        </div> -->
-        </div>
-        <table class="table table-bordered text-center mt-2 form">
-            <tr>
-                <th>No</th>
-                <th>Id</th>
-                <th>Tipe Mobil </th>
-                <th>Deskripsi</th>
-                <th>Foto Mobil</th>
-                <th>Harga</th>
-                <th>Aksi</th>
-            </tr>
-            <?php 
+                <div class="container">
+                    <div class="row d-flex align-items-center mt-4">
+                        <div class="col-4">
+                            <h2>Manage Car List</h2>
+                        </div>
+                    </div>
+                    <table class="table table-bordered text-center mt-1 form">
+                        <tr>
+                            <th>No</th>
+                            <th>Id</th>
+                            <th>Tipe Mobil </th>
+                            <th>Deskripsi</th>
+                            <th>Foto Mobil</th>
+                            <th>Harga</th>
+                            <th>Aksi</th>
+                        </tr>
+                        <?php 
 		include 'koneksi.php';
 		$no = 1;
         $sql= ("select * from tbmobil");
 		$query = mysqli_query($konek,$sql);
 		while($data = mysqli_fetch_array($query)){
 			?>
-            <tr class="align-middle">
-                <td><?php echo $no++; ?></td>
-                <td><?=$data['id']?></td>
-                <td><?=$data['TipeMobil']?></td>
-                <td><?=$data['Deskripsi']?></td>
-                <td><img src="mobil/<?=$data['FotoMobil']?>" alt="" style="max-width: 100px; max-height: 150px"></td>
-                <td><?=$data['Harga']?></td>
-                <td>
-                    <a class="btn btn-info" href="FormEditCarList.php?id='<?php echo $data['id'];?>'">EDIT</a>
+                        <tr class="align-middle">
+                            <td><?php echo $no++; ?></td>
+                            <td><?=$data['id']?></td>
+                            <td><?=$data['TipeMobil']?></td>
+                            <td><?=$data['Deskripsi']?></td>
+                            <td><img src="mobil/<?=$data['FotoMobil']?>" alt=""
+                                    style="max-width: 100px; max-height: 150px"></td>
+                            <td><?=$data['Harga']?></td>
+                            <td>
+                                <a class="btn btn-info"
+                                    href="FormEditCarList.php?id='<?php echo $data['id'];?>'">EDIT</a>
 
-                    <a class="btn btn-danger" href="DeleteCarList.php?id=<?php echo $data['id'];?>"
-                        onclick="return confirm('Yakin mau Hapus?')">HAPUS</a>
-                </td>
-            </tr>
-            <?php 
+                                <a class="btn btn-danger" href="DeleteCarList.php?id=<?php echo $data['id'];?>"
+                                    onclick="return confirm('Yakin mau Hapus?')">HAPUS</a>
+                            </td>
+                        </tr>
+                        <?php 
 		}
 		?>
-        </table>
-        <div class="row">
-            <div class="d-flex align-items-end justify-content-end">
-                <a href="cetakLaporan.php" class="btn btn-success" A>
-                    Cetak
-                </a>
+                    </table>
+                    <div class="row">
+                        <div class="d-flex align-items-end justify-content-end">
+                            <a href="cetakLaporan.php" class="btn btn-success" A>
+                                Cetak
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
     </div>
-
     <script src="js/bootstrap.bundle.js"></script>
-
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/adminscripts.js"></script>
 </body>
 
 </html>
