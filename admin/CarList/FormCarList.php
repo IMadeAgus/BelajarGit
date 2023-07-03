@@ -43,49 +43,7 @@
         </div>
     </div>
 
-    <!-- <div class="container">
 
-        <h5 class="align-text-center mt-5">Form ADD Cars</h5>
-
-        <form name="FormAddCars" method="post" enctype="multipart/form-data" action="AddCarList.php">
-            <table>
-                <tr>
-                    <td>Merek Mobil</td>
-                    <td>:</td>
-                    <td><input type="text" name="MerekMobil"></td>
-                </tr>
-                <tr>
-                    <td>Tipe Mobil</td>
-                    <td>:</td>
-                    <td><input type="text" name="TipeMobil"></td>
-                </tr>
-                <tr>
-                    <td>Deskripsi </td>
-                    <td>:</td>
-                    <td><input type="text" name="Deskripsi"></td>
-                </tr>
-                <tr>
-                    <td>Foto Mobil </td>
-                    <td>:</td>
-                    <td><input type="file" name="FotoMobil"></td>
-                </tr>
-                <tr>
-                    <td>Harga </td>
-                    <td>:</td>
-                    <td><input type="number" name="Harga"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td><input type="submit" name="simpan" value="Simpan">
-                        <input type="reset" value="Batal">
-
-                    </td>
-                </tr>
-
-            </table>
-        </form>
-    </div> -->
 </body>
 
 </html>

@@ -10,7 +10,7 @@
         $TanggalPeminjaman = $_POST['TanggalPeminjaman'];
         $LamaPeminjaman = $_POST['LamaPeminjaman'];
     
-        $sql = "INSERT INTO tb_transaksi VALUES ('','$Nama', '$NoHp', '$Merek', '$TipeMobil', '$Harga', '$TanggalPeminjaman', '$LamaPeminjaman')";
+        $sql = "INSERT INTO tbtransaksi VALUES ('','$Nama', '$NoHp', '$Merek', '$TipeMobil', '$Harga', '$TanggalPeminjaman', '$LamaPeminjaman')";
         $query = mysqli_query($koneksi, $sql);
     
         if($query) {

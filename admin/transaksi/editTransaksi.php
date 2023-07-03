@@ -19,7 +19,7 @@ if(isset($_POST['edit'])){
                 Harga                 ='$Harga',
                 TanggalPeminjaman     ='$TanggalPeminjaman',
                 LamaPeminjaman        ='$LamaPeminjaman'
-                WHERE id='$id'";
+            WHERE id='$id'";
         $query = mysqli_query($koneksi, $sql);
 
         if($query){

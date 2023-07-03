@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'koneksi.php';?>
+<?php include 'koneksi.php'; ?>
 
 <head>
     <meta charset="UTF-8">
@@ -34,10 +34,10 @@
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
-                        <a class="nav-link" href="final.php">HOME</a>
+                        <a class="nav-link" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="final.php">CAR LIST</a>
+                        <a class="nav-link" href="#CarList">CAR LIST</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="orderlist.php">ORDER LIST</a>
@@ -82,14 +82,14 @@
                 <th>Aksi</th>
             </tr>
             <?php
-    include 'koneksi.php';
-    $no = 1;
-    $sql = ("SELECT tb_penyewa.*,tbmobil.TipeMobil, tbmobil.Harga
+            include 'koneksi.php';
+            $no = 1;
+            $sql = ("SELECT tb_penyewa.*,tbmobil.TipeMobil, tbmobil.Harga
     FROM tb_penyewa
     JOIN tbmobil ON tb_penyewa.mobil_id = tbmobil.id;");
-    $query = mysqli_query($konek, $sql);
-    while ($data = mysqli_fetch_array($query)) {
-    ?>
+            $query = mysqli_query($konek, $sql);
+            while ($data = mysqli_fetch_array($query)) {
+            ?>
             <tr class="align-middle">
                 <td><?php echo $no++; ?></td>
                 <td><?= $data['nama'] ?></td>
@@ -103,11 +103,13 @@
 
                 <td>
                     <a class="btn btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Pay</a>
+                    <a class="btn btn-success" href="formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
+
                 </td>
             </tr>
             <?php
-    }
-    ?>
+            }
+            ?>
         </table>
         <!-- <div class="row">
             <div class="d-flex align-items-end justify-content-end">
