@@ -20,10 +20,6 @@ ul li a.nav-link:hover {
   margin-right: 0.5rem;
 }
 
-#navbarNav {
-  width: 100%;
-  background-color: #412496;
-}
 /* Navbar End */
 
 /* Hero */
@@ -144,9 +140,6 @@ ul li a.nav-link:hover {
   object-fit: cover;
 }
 
-.btn-kl {
-  background-color: #412496;
-}
 /* List Car End */
 
 /* Gallery */

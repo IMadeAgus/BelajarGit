@@ -14,7 +14,7 @@
     <!-- Css Responsive -->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Feather Icons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script script src="https://unpkg.com/feather-icons"></script>
     <!-- Aos -->
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- link swetalert2 -->

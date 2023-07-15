@@ -9,8 +9,6 @@
     <!-- Bootsrap -->
     <link rel="stylesheet" href="css/bootstrap.css" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/adminstyles.css" rel="stylesheet" />
     <!-- responsive css -->
@@ -35,10 +33,7 @@
                     href="penyewa/tampilsewa.php">OrderList</a>
                 <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
                     href="#!">TransactionList</a>
-                <a class="list-group-item list-group-item-action  text-white  p-3" style="background-color: #412496;"
-                    href="#!">Profile</a>
-                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
-                    href="#!">Status</a>
+
             </div>
         </div>
         <!-- Page content wrapper-->
@@ -68,7 +63,7 @@
             </nav>
             <!-- Page content-->
             <div class="container-fluid">
-                <div class="row d-flex h-100 justify-content-center align-content-center mx-2 ">
+                <div class="row d-flex  justify-content-center align-content-center mx-2 ">
                     <!-- flex-item -->
                     <div class="col-lg-12 card form ">
                         <!-- Judul-form -->
@@ -101,7 +96,7 @@
                         <h2>Manage Car List</h2>
                     </div>
                 </div>
-                <table class="table table-bordered text-center mt-1 form">
+                <table class="table table-bordered text-center mt-1 ">
                     <tr>
                         <th>No</th>
                         <th>Id</th>

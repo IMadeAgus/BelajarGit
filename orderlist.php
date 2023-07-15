@@ -59,7 +59,7 @@
 
     <!-- Table Order List -->
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row d-flex align-items-center mt-4">
             <div class="col-4">
                 <h2>Order List</h2>
@@ -69,7 +69,7 @@
             <a class="btn btn-success" href="FormCarList.php">Tambah Mobil</a>
         </div> -->
         </div>
-        <table class="table table-bordered text-center mt-2">
+        <table class="table table-bordered text-center OrderList mt-2">
             <tr>
                 <th>No</th>
                 <th>Nama</th>
@@ -77,7 +77,7 @@
                 <th>No KTP </th>
                 <th>Tipe Mobil</th>
                 <th>Harga</th>
-                <th>TGl Peminjaman </th>
+                <th>TGL Peminjaman </th>
                 <th>TGL Pengembalian</th>
                 <th>Lama Peminjaman</th>
                 <th>Aksi</th>
@@ -100,6 +100,7 @@
                 <td><?= $data['Harga'] ?></td>
                 <td><?= $data['tanggal_peminjaman'] ?></td>
                 <td><?= $data['tanggal_pengembalian'] ?></td>
+<<<<<<< HEAD
                 <td><?= $data['lama_peminjaman'] ?></td>
 
                 <td>
@@ -108,9 +109,35 @@
 
                 </td>
             </tr>
+=======
+                <td><?= $data['lama_peminjaman']  . 'hari' ?></td>
+
+                <td>
+                    <a class="btn btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Bayar</a>
+                    <a class="btn btn-success" href="formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
+                    <a class="btn btn-danger" href="hapususer.php?id= <?php echo $data['id']; ?> "
+                        onclick="return confirm('Apakah Anda Yakin Menghapus Data?')">Hapus </a>
+                </td>
+            </tr>
+
+
+>>>>>>> 59fc6b9f254bccca7f8fdd234fac7c74625b97a6
             <?php
             }
+
             ?>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td align=""><a class="btn btn-warning"
+                        href="/admin/penyewa/cetak.php?id=<?php echo $data['id']; ?>">Print</a></td>
         </table>
         <!-- <div class="row">
             <div class="d-flex align-items-end justify-content-end">
@@ -127,7 +154,7 @@
 
     <!-- Footer -->
     <section class="Footer ">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row d-flex align-items-center justify-content-between">
                 <div class="col-4 py-5">
 
@@ -152,11 +179,9 @@
                 </div>
             </div>
             <div class="row d-flex align-items-center justify-content-center py-3">
-                <div class="col-4"></div>
-                <div class="col-4">
-                    <p class="text-white">Copyright@2023 BMWM Team. All Rights Reserved.</p>
+                <div class="col-lg-4 col-md-12 col-sm-12 mt-4">
+                    <p class="text-white text-center">Copyright@2023 BMWM Team. All Rights Reserved.</p>
                 </div>
-                <div class="col-4"></div>
             </div>
         </div>
 

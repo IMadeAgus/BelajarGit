@@ -33,10 +33,13 @@
                     href="penyewa/tampilsewa.php">OrderList</a>
                 <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
                     href="#!">TransactionList</a>
+<<<<<<< HEAD
                 <a class="list-group-item list-group-item-action  text-white  p-3" style="background-color: #412496;"
                     href="#!">Profile</a>
                 <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
                     href="#!">Status</a>
+=======
+>>>>>>> 59fc6b9f254bccca7f8fdd234fac7c74625b97a6
             </div>
         </div>
         <!-- Page content wrapper-->
