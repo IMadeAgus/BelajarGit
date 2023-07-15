@@ -7,7 +7,7 @@ session_start(); // untuk menginisiasi sesi, menjaga status login di berbagai ha
 error_reporting(0);
 
 if (isset($_SESSION['username'])) {
-    header("Location: final.php");
+    header("Location:../final.php");
 }
 
 if (isset($_POST['submit'])) {
@@ -17,10 +17,10 @@ if (isset($_POST['submit'])) {
 	$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 	$result = mysqli_query($conn, $sql);
     
-	if ($result->num_rows > 0) { //ketika sudah cocok dengan yang sudah didaftarkan maka user berhasil login.
+	if ($result->num_rows > 0) { 
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['username'] = $row['username'];
-		header("Location: final.php");
+		header("Location:../final.php");
 	} else {
 		echo "<script>alert('Woops! Email Atau Password anda Salah.')</script>";
 	}
@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="container">
         <form action="" method="POST" class="login-email">
-            <p style="font-size: 2rem; font-weight: 850;">Log In User</p>
+            <p style="font-size: 2rem; font-weight: 850;">Log In</p>
 
             <div class="input-group"><input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>"
                     required></div>
@@ -56,6 +56,7 @@ if (isset($_POST['submit'])) {
                 <a href="loginadmin.php">admin | </a>
                 <a href="login.php">user</a>
             </div>
+
             <p class="login-register-text">Don't Have an Account ?
                 <a href="register.php">Register</a>.
             </p>

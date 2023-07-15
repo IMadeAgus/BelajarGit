@@ -26,7 +26,7 @@ if($cek > 0){
 		$_SESSION['email'] = $email;
 		$_SESSION['level'] = "admin";
 		// alihkan ke halaman dashboard admin
-		header("location: halaman_admin.php");
+		header("location: ../admin/index.php");
 
 	}else{
 

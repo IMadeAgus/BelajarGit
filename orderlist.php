@@ -26,16 +26,18 @@
                 <img src="img/logo.png" width="50" height="50" class="navbar-logo" alt="">
                 BRAVO RENT CAR
             </a>
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span><i data-feather="list"></i></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
+                        <a class="nav-link" href="final.php">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#CarList">CAR LIST</a>
+                        <a class="nav-link" href="final.php">CAR LIST</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="orderlist.php">ORDER LIST</a>
@@ -44,7 +46,8 @@
                         <a class="nav-link" href="gallery.php">GALLERY</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="logout.php" onclick="return confirm('Yakin mau Log Out?')">LOG
+                        <a class="nav-link" href="loginout/logout.php"
+                            onclick="return confirm('Yakin mau Log Out?')">LOG
                             OUT</a>
                     </li>
                 </ul>
@@ -88,23 +91,23 @@
             $query = mysqli_query($konek, $sql);
             while ($data = mysqli_fetch_array($query)) {
             ?>
-                <tr class="align-middle">
-                    <td><?php echo $no++; ?></td>
-                    <td><?= $data['nama'] ?></td>
-                    <td><?= $data['no_hp'] ?></td>
-                    <td><?= $data['no_ktp'] ?></td>
-                    <td><?= $data['TipeMobil'] ?></td>
-                    <td><?= $data['Harga'] ?></td>
-                    <td><?= $data['tanggal_peminjaman'] ?></td>
-                    <td><?= $data['tanggal_pengembalian'] ?></td>
-                    <td><?= $data['lama_peminjaman'] ?></td>
+            <tr class="align-middle">
+                <td><?php echo $no++; ?></td>
+                <td><?= $data['nama'] ?></td>
+                <td><?= $data['no_hp'] ?></td>
+                <td><?= $data['no_ktp'] ?></td>
+                <td><?= $data['TipeMobil'] ?></td>
+                <td><?= $data['Harga'] ?></td>
+                <td><?= $data['tanggal_peminjaman'] ?></td>
+                <td><?= $data['tanggal_pengembalian'] ?></td>
+                <td><?= $data['lama_peminjaman'] ?></td>
 
-                    <td>
-                        <a class="btn btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Pay</a>
-                        <a class="btn btn-success" href="formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
+                <td>
+                    <a class="btn btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Pay</a>
+                    <a class="btn btn-success" href="formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
 
-                    </td>
-                </tr>
+                </td>
+            </tr>
             <?php
             }
             ?>

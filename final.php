@@ -48,7 +48,8 @@
                         <a class="nav-link" href="gallery.php">GALLERY</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="logout.php" onclick="return confirm('Yakin mau Log Out?')">LOG
+                        <a class="nav-link" href="loginout/logout.php"
+                            onclick="return confirm('Yakin mau Log Out?')">LOG
                             OUT</a>
                     </li>
                 </ul>

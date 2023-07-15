@@ -1,9 +1,9 @@
 <?php 
-$koneksi = mysqli_connect("localhost","root","","Data_saya");
- 
+$koneksi = mysqli_connect("localhost","root","","dbsewamobil");
+
 // Check connection
 if (mysqli_connect_errno()){
 	echo "Koneksi database gagal : " . mysqli_connect_error();
 }
- 
+
 ?>

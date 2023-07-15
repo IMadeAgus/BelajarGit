@@ -78,7 +78,7 @@ body {
   text-decoration: none;
   color: #6c5ce7;
 }
-@media (max-width: 450px) {
+@media (max-width: 430px) {
   .container {
     width: 330px;
   }

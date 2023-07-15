@@ -2,7 +2,7 @@
 $server='localhost';
 $user = 'root';
 $pass = '';
-$database ='Data_saya';
+$database ='dbsewamobil';
 
 $conn = mysqli_connect($server,$user,$pass,$database);
 

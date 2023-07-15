@@ -25,12 +25,18 @@
                 BRAVO RENT CAR
             </div>
             <div class="list-group list-group-flush ">
-                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;" href="#!">Dashboard</a>
-                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;" href="Carlist/ShowCarList.php">CarList</a>
-                <a class="list-group-item list-group-item-action  text-white  p-3" style="background-color: #412496;" href="penyewa/tampilsewa.php">OrderList</a>
-                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;" href="#!">TransactionList</a>
-                <a class="list-group-item list-group-item-action  text-white  p-3" style="background-color: #412496;" href="#!">Profile</a>
-                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;" href="#!">Status</a>
+                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
+                    href="#!">Dashboard</a>
+                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
+                    href="Carlist/ShowCarList.php">CarList</a>
+                <a class="list-group-item list-group-item-action  text-white  p-3" style="background-color: #412496;"
+                    href="penyewa/tampilsewa.php">OrderList</a>
+                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
+                    href="#!">TransactionList</a>
+                <a class="list-group-item list-group-item-action  text-white  p-3" style="background-color: #412496;"
+                    href="#!">Profile</a>
+                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
+                    href="#!">Status</a>
             </div>
         </div>
         <!-- Page content wrapper-->
@@ -41,7 +47,9 @@
                     <button class="btn text-white" id="sidebarToggle">
                         <span><i data-feather="toggle-left"></i></span>
                     </button>
-                    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span><i data-feather="list"></i></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,7 +58,9 @@
                                 <a class="nav-link text-white" href="#!">Home</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link text-white" href="#!">Log Out</a>
+                                <a class="nav-link text-white" href="../loginout/logout.php"
+                                    onclick="return confirm('Yakin mau Log Out?')">LOG
+                                    OUT</a>
                             </li>
                         </ul>
                     </div>
@@ -68,7 +78,7 @@
     <!-- Core theme JS-->
     <script src="js/adminscripts.js"></script>
     <script>
-        feather.replace()
+    feather.replace()
     </script>
 </body>
 
