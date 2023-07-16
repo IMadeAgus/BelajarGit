@@ -27,7 +27,7 @@
                     id="email" required="required">
             </div>
 
-            <div class="input-group"><button name="submit" class="btn">LogIn</button></div>
+            <div class="input-group"><button name="submit" class="btn">Log In</button></div>
 
 
 
@@ -37,10 +37,7 @@
             </div>
 
         </form>
-
     </div>
-
-
 </body>
 
 </html>

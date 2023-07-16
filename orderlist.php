@@ -37,7 +37,7 @@
                         <a class="nav-link" href="final.php">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#CarList">CAR LIST</a>
+                        <a class="nav-link" href="final.php">CAR LIST</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="orderlist.php">ORDER LIST</a>
@@ -46,7 +46,8 @@
                         <a class="nav-link" href="gallery.php">GALLERY</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="logout.php" onclick="return confirm('Yakin mau Log Out?')">LOG
+                        <a class="nav-link" href="loginout/logout.php"
+                            onclick="return confirm('Yakin mau Log Out?')">LOG
                             OUT</a>
                     </li>
                 </ul>
@@ -97,6 +98,16 @@
                 <td><?= $data['Harga'] ?></td>
                 <td><?= $data['tanggal_peminjaman'] ?></td>
                 <td><?= $data['tanggal_pengembalian'] ?></td>
+<<<<<<< HEAD
+                <td><?= $data['lama_peminjaman'] ?></td>
+
+                <td>
+                    <a class="btn btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Pay</a>
+                    <a class="btn btn-success" href="formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
+
+                </td>
+            </tr>
+=======
                 <td><?= $data['lama_peminjaman']  . 'hari' ?></td>
 
                 <td>
@@ -108,6 +119,7 @@
             </tr>
 
 
+>>>>>>> 59fc6b9f254bccca7f8fdd234fac7c74625b97a6
             <?php
             }
             

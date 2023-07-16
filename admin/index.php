@@ -33,6 +33,13 @@
                     href="penyewa/tampilsewa.php">OrderList</a>
                 <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
                     href="#!">TransactionList</a>
+<<<<<<< HEAD
+                <a class="list-group-item list-group-item-action  text-white  p-3" style="background-color: #412496;"
+                    href="#!">Profile</a>
+                <a class="list-group-item list-group-item-action  text-white p-3" style="background-color: #412496;"
+                    href="#!">Status</a>
+=======
+>>>>>>> 59fc6b9f254bccca7f8fdd234fac7c74625b97a6
             </div>
         </div>
         <!-- Page content wrapper-->
@@ -54,7 +61,9 @@
                                 <a class="nav-link text-white" href="#!">Home</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link text-white" href="#!">Log Out</a>
+                                <a class="nav-link text-white" href="../loginout/logout.php"
+                                    onclick="return confirm('Yakin mau Log Out?')">LOG
+                                    OUT</a>
                             </li>
                         </ul>
                     </div>
