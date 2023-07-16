@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+include '../../Koneksi/koneksi.php';
     if (isset($_POST['simpan'])) {
         $folder = './mobil/';
         $name_p = $_FILES['FotoMobil']['name'];
@@ -12,8 +12,5 @@ include 'koneksi.php';
         else {
             echo"Data Gagal Disimpan";
         }
-    }
-    if(isset($_POST['batal'])){
-        header("location:ShowCarList.php");
     }
         ?>

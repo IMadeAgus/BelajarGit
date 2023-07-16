@@ -4,23 +4,43 @@
   box-sizing: border-box;
   font-family: poppins, sans-serif;
 }
-body {
+/* Navbar */
+ul li a.nav-link {
+  color: #ffffff;
+}
+
+ul li a.nav-link:hover {
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-logo {
+  margin-right: 0.5rem;
+}
+
+/* Navbar End */
+
+.bg {
   background-image: url(bg.jpg);
-  min-height: 100vh;
+  min-height: 110vh;
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.container {
+
+.form-login {
+  padding-top: 100px;
+}
+
+.login-custom {
+  padding: 20vh 7% 0;
   width: 450px;
   min-height: 450px;
   border-radius: 25px;
   box-shadow: 1px, 1px, 5px black;
   padding: 40px 30px;
+  margin-bottom: 0rem;
 }
-.container.login-text {
+.login-custom.login-text {
   color: #111;
   font-weight: 500;
   font-size: 1.1rem;
@@ -30,12 +50,12 @@ body {
   text-transform: capitalize;
 }
 
-.container .login-email .input-group {
+.login-custom .login-email .input-group {
   width: 100%;
   height: 50px;
   margin-bottom: 25px;
 }
-.container .login-email .input-group input {
+.login-custom .login-email .input-group input {
   width: 100%;
   height: 100%;
   border: 2px solid black;
@@ -45,11 +65,11 @@ body {
   outline: none;
   transition: 0.3s;
 }
-.container.login-email .input-group input:focus,
-.container.login-email .input-group input:valid {
+.login-custom.login-email .input-group input:focus,
+.login-custom.login-email .input-group input:valid {
   border: #6c5ce7;
 }
-.container .login-email .input-group .btn {
+.login-custom .login-email .input-group .btn {
   display: block;
   width: 100%;
   padding: 15px 20px;
@@ -65,9 +85,13 @@ body {
   margin-top: 5%;
 }
 
-.container .login-email .input-group .btn:hover {
+.login-custom .login-email .input-group .btn:hover {
   transform: translate(-5px);
   background: #6c5ce7;
+}
+
+.btn {
+  margin-top: 0px;
 }
 
 .login-register-text {
@@ -79,7 +103,7 @@ body {
   color: #6c5ce7;
 }
 @media (max-width: 430px) {
-  .container {
+  .login-custom {
     width: 330px;
   }
 }
@@ -93,7 +117,7 @@ input {
   background: transparent;
   transition: 0.3s;
 }
-.container .login-email .input-group .btn {
+.login-custom .login-email .input-group .tombol {
   display: block;
   width: 100%;
   padding: 15px 20px;
@@ -109,7 +133,7 @@ input {
 }
 /*background color registrasi and log in */
 
-.container,
+.login-custom,
 .login-email .input-group .btn:hover {
   transform: translate(-5px);
   background: rgba(227, 227, 227, 0.705);
@@ -117,6 +141,15 @@ input {
 .login-register-text {
   color: #111;
 }
-.container p {
+.login-custom p {
   margin-bottom: 20px;
 }
+/* Footer */
+.Footer {
+  background-color: #412496;
+}
+.Footercontact {
+  margin-left: 4rem;
+  margin-top: 6rem;
+}
+/* Footer End */
