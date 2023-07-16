@@ -225,48 +225,26 @@
 
     <!-- Our Driver -->
     <div class="container-fluid driver">
-        <h2 class="fw-bold d-flex  justify-content-center my-5">Our Driver</h2>
-        <div class="row mt-5 ">
+        <h2 class="fw-bold d-flex  justify-content-center pt-5 my-5">Our Driver</h2>
+        <div class="row mt-5 mx-5 ">
             <div class="col-3">
-                <div class="d-flex justify-content-center align-items-center ">
-                    <img src="img/Driver.png" alt="">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="img/Driver.png" alt="" style="max-width: 100px; max-height: 150px">
                 </div>
             </div>
             <div class="col-3">
                 <div class="d-flex justify-content-center align-items-center ">
-                    <img src="img/Driver.png" alt="">
+                    <img src="img/Driver.png" alt="" style="max-width: 100px; max-height: 150px">
                 </div>
             </div>
             <div class="col-3">
                 <div class="d-flex justify-content-center align-items-center ">
-                    <img src="img/Driver.png" alt="">
+                    <img src="img/Driver.png" alt="" style="max-width: 100px; max-height: 150px">
                 </div>
             </div>
             <div class="col-3">
                 <div class="d-flex justify-content-center align-items-center ">
-                    <img src="img/Driver.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-3">
-                <div class="d-flex justify-content-center align-items-center ">
-                    <img src="img/Driver.png" alt="">
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="d-flex justify-content-center align-items-center ">
-                    <img src="img/Driver.png" alt="">
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="d-flex justify-content-center align-items-center ">
-                    <img src="img/Driver.png" alt="">
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="d-flex justify-content-center align-items-center ">
-                    <img src="img/Driver.png" alt="">
+                    <img src="img/Driver.png" alt="" style="max-width: 100px; max-height: 150px">
                 </div>
             </div>
         </div>

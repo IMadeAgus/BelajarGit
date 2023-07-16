@@ -59,19 +59,20 @@
     <!-- //End Navbar Session -->
 
     <!-- GALLERY -->
-    <div class="container gallery">
+    <div class="container-fluid gallery">
         <h2 class="fw-bold  my-5">GALLERY</h2>
-        <table>
+
+        <table class="">
             <!-- Baris 1 -->
             <tr>
                 <td>
-                    <img class="img" src="img/Promo.jpg" alt="">
+                    <img class="img " src="img/Promo.jpg" alt="">
                 </td>
                 <td>
                     <img class="img" src="img/Promo.jpg" alt="">
                 </td>
                 <td rowspan="2" colspan="2">
-                    <img class="imgbesar" src="img/Promo.jpg" alt="">
+                    <img class="imgbesar mg-fluid" src="img/Promo.jpg" alt="">
                 </td>
                 <td></td>
             </tr>

@@ -63,10 +63,6 @@
             <div class="col-4">
                 <h2>Order List</h2>
             </div>
-            <!-- <div class="col-4"></div>
-        <div class="col-4 d-flex align-items-end justify-content-end">
-            <a class="btn btn-success" href="FormCarList.php">Tambah Mobil</a>
-        </div> -->
         </div>
         <table class="table table-bordered text-center OrderList mt-2">
             <tr>
@@ -85,9 +81,11 @@
             include 'koneksi.php';
             $no = 1;
             $sql = ("SELECT tb_penyewa.*,tbmobil.TipeMobil, tbmobil.Harga
-    FROM tb_penyewa
-    JOIN tbmobil ON tb_penyewa.mobil_id = tbmobil.id;");
+            FROM tb_penyewa
+            JOIN tbmobil ON tb_penyewa.mobil_id = tbmobil.id;");
+            
             $query = mysqli_query($konek, $sql);
+
             while ($data = mysqli_fetch_array($query)) {
             ?>
             <tr class="align-middle">
@@ -102,9 +100,9 @@
                 <td><?= $data['lama_peminjaman']  . 'hari' ?></td>
 
                 <td>
-                    <a class="btn btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Bayar</a>
-                    <a class="btn btn-success" href="formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
-                    <a class="btn btn-danger" href="hapususer.php?id= <?php echo $data['id']; ?> "
+                    <a class="btn tmbl btn-info" href="formbayaruser.php?id=<?php echo $data['id']; ?>">Bayar</a>
+                    <a class="btn tmbl btn-success" href="formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
+                    <a class="btn tmbl btn-danger" href="hapususer.php?id= <?php echo $data['id']; ?> "
                         onclick="return confirm('Apakah Anda Yakin Menghapus Data?')">Hapus </a>
                 </td>
             </tr>
@@ -112,36 +110,21 @@
 
             <?php
             }
-
+            
             ?>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td align=""><a class="btn btn-warning"
-                        href="/admin/penyewa/cetak.php?id=<?php echo $data['id']; ?>">Print</a></td>
         </table>
-        <!-- <div class="row">
-            <div class="d-flex align-items-end justify-content-end">
-                <a href="print.php" class="btn btn-success" A>
-                    Cetak
-                </a>
-            </div>
-        </div> -->
-    </div>
 
+        <div class="row">
+            <div class="d-flex align-items-end justify-content-end">
+                <a class="btn tmbl btn-warning" href="/admin/penyewa/cetak.php?id=<?php echo $data['id']; ?>">Print</a>
+            </div>
+        </div>
+    </div>
 
     <!-- End Tablr Order List Session -->
 
-
     <!-- Footer -->
-    <section class="Footer ">
+    <section class="Footer">
         <div class="container-fluid">
             <div class="row d-flex align-items-center justify-content-between">
                 <div class="col-4 py-5">
