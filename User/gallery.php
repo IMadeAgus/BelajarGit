@@ -62,7 +62,7 @@
     <div class="container-fluid gallery">
         <h2 class="fw-bold  my-5">GALLERY</h2>
 
-        <table class="" width="100%">
+        <table class="gallery" width="100%" height="100%">
             <!-- Baris 1 -->
             <tr>
                 <td>

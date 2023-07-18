@@ -1,8 +1,9 @@
-/* body {
-  background-image: url("img/bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-} */
+.bg {
+  background-image: url(../../img/bgform-sewa.png);
+  height: 230vh;
+  background-size: cover;
+}
+
 /* Navbar */
 ul li a.nav-link {
   color: #ffffff;
@@ -25,10 +26,17 @@ ul li a.nav-link:hover {
 /* Navbar End */
 
 .form {
-  margin-top: 15rem;
+  padding-top: 10rem;
+}
+.tmbl {
+  width: 90px;
+}
+/* Footer */
+.Footer-sewauser {
+  margin-top: 30rem;
+  background-color: #412496;
 }
 
-/* Footer */
 .Footer {
   margin-top: 20rem;
   background-color: #412496;

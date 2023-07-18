@@ -64,17 +64,17 @@
             </div>
         </div>
         <table class="table table-bordered text-center OrderList mt-2">
-            <tr>
+            <tr style="background-color: #412496;" class="text-white">
                 <th>No</th>
-                <th>Nama</th>
-                <th>No Hp</th>
-                <th>No KTP </th>
-                <th>Tipe Mobil</th>
-                <th>Harga</th>
-                <th>TGL Peminjaman </th>
-                <th>TGL Pengembalian</th>
-                <th>Lama Peminjaman</th>
-                <th>Aksi</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Id Card Number </th>
+                <th>Car Type</th>
+                <th>Price</th>
+                <th>Loan Date </th>
+                <th>Return Date</th>
+                <th>Lenght of Loan</th>
+                <th>Action</th>
             </tr>
             <?php
             
@@ -98,19 +98,16 @@
                 <td><?= $data['tanggal_pengembalian'] ?></td>
                 <td><?= $data['lama_peminjaman']  . 'hari' ?></td>
                 <td>
-                    <a class="btn tmbl btn-info" href="Bayar/formbayaruser.php?id=<?php echo $data['id']; ?>">Bayar</a>
-                    <a class="btn tmbl btn-success"
+                    <a class=" btn tmbl btn-info " href=" Bayar/formbayaruser.php?id=<?php echo $data['id']; ?>">
+                        Bayar</a>
+                    <a class="btn tmbl btn-success "
                         href="Sewa/formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
                     <a class="btn tmbl btn-danger" href="Sewa/hapussewauser.php?id= <?php echo $data['id']; ?> "
                         onclick="return confirm('Apakah Anda Yakin Menghapus Data?')">Hapus </a>
                 </td>
             </tr>
-            <?php
-            }
-            
-            ?>
+            <?php } ?>
         </table>
-
         <div class="row">
             <div class="d-flex align-items-end justify-content-end">
                 <a class="btn tmbl btn-warning" href="/admin/penyewa/cetak.php?id=<?php echo $data['id']; ?>">Print</a>

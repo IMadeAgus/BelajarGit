@@ -68,20 +68,22 @@
     <!-- Banner  -->
     <div class="container-fluid banner">
         <div class="row my-5">
-            <div class="col-lg-6 col-md-12 col-sm-12 mt-4 text-black content">
+            <div class="col-lg-7 col-md-12 col-sm-12 mt-4 text-black content">
                 <h2 class="fw-bold">Welcome To Bravo Rent Car</h2>
-                <p class="mt-4">
+                <h5 class="mt-4">
                     Travel around Bali in a new car with your personal, English’s speaking driver.
-                </p>
-                <p class="mt-4">
+                </h5>
+                <h5 class="mt-4">
                     Get 10 hours daily service, fuel and unlimited mileage to go just anywhere you want!
-                    Plan any tour, get a ride to beaches, shops and restaurants.
-                </p>
-                <p class="mt-4">
+                    Plan any tour, get a ride to beaches, shops and restaurants. </h5>
+                </5h>
+                <h5 class="mt-4">
                     Book without credit card, change or cancel reservation any time, free of charge.
-                </p>
+                </h5>
                 <div class="my-5">
-                    <a href="#CarList" class="btn tombol"> Book a Car Now</a>
+                    <a href="#CarList" class="btn tombol rounded-3">
+                        <h5>Book a Car Now</h5>
+                    </a>
                 </div>
             </div>
 
@@ -91,11 +93,13 @@
 
     <!-- Promo -->
     <section class="Promo">
-        <main class="content text-white ">
-            <h1 class="fw-bold">Bravo Rent Car Best Offers</h1>
-            <h4 class="mt-4">* Free Airport Pickup for an Elevated Experience</h4>
-            <h4 class="mt-4">* Get free one cup of Luwak coffee in coffee plantation</h4>
-            <h4 class="mt-4">* Get free banana boat for one person (If book more then two days).</h4>
+        <main class=" text-white content ">
+            <div class="fw-bold ">
+                <h1>Bravo Rent Car Best Offers</h1>
+                <h3 class="mt-4">* Free Airport Pickup for an Elevated Experience</h3>
+                <h3 class="mt-4">* Get free one cup of Luwak coffee in coffee plantation</h3>
+                <h3 class="mt-4">* Get free banana boat for one person (If book more then two days).</h3>
+            </div>
         </main>
     </section>
     <!--//End Promo session -->
@@ -185,19 +189,22 @@
             $counter = 1; // counter untuk menghitung jumlah card yang ditampilkan
             while ($hasil = mysqli_fetch_array($sql)) {
                 ?>
-            <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
-                <div class="card text-center">
-                    <div class="align-align-items-center">
+            <div class="col-lg-3 col-md-3 col-sm-3 mt-4">
+                <div class="card text-center d-flex justify-content-center align-items-center">
+                    <div class="fotomobil">
                         <img src="../admin/CarList/mobil/<?php echo $hasil['FotoMobil'];?>"
-                            class="card-img-top img-fluid " alt="..." />
+                            class="card-img-top img-fluid  " alt="..." />
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title fw-bold"><?php echo $hasil['TipeMobil'];?></h5>
+                        <h3 class="card-title fw-bold"><?php echo $hasil['TipeMobil'];?></h3>
                         <p class="card-text fw-semibold">
                             IDR <?php echo $hasil['Harga'];?>
                         </p>
                         <p><?php echo $hasil['Deskripsi'];?></p>
-                        <a class="btn tombol" href="Sewa/formsewauser.php?id='<?php echo $hasil['id'];?>'">Order Now</a>
+                        <a class="btn tombol my-3 fw-bold rounded-3"
+                            href="Sewa/formsewauser.php?id='<?php echo $hasil['id'];?>'">
+                            <h5>Order Now</h5>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -218,27 +225,43 @@
     <!-- //end Customer Review session -->
 
     <!-- Our Driver -->
-    <div class="container-fluid driver">
+    <div class="container-fluid driver ">
         <h2 class="fw-bold d-flex  justify-content-center pt-5 my-5">Our Driver</h2>
-        <div class="row mt-5 mx-5 ">
-            <div class="col-3">
+        <div class="row mt-5 mx-5 px-4 ">
+            <div class="col-3 ">
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="../img/Driver.png" alt="" style="max-width: 100px; max-height: 150px">
+                    <img src="../img/Driver/Krisna.jpeg" class="  rounded-4" alt=""
+                        style="max-width: 300px; max-height: 300px">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-center">Krishna Paradipta </h3>
                 </div>
             </div>
             <div class="col-3">
                 <div class="d-flex justify-content-center align-items-center ">
-                    <img src="../img/Driver.png" alt="" style="max-width: 100px; max-height: 150px">
+                    <img src="../img/Driver/Made.jpeg" class="  rounded-4" alt=""
+                        style="max-width: 300px; max-height:300px">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-center">Made Agus </h3>
                 </div>
             </div>
             <div class="col-3">
                 <div class="d-flex justify-content-center align-items-center ">
-                    <img src="../img/Driver.png" alt="" style="max-width: 100px; max-height: 150px">
+                    <img src="../img/Driver/Weda.jpeg" class="  rounded-4" alt=""
+                        style="max-width: 300px; max-height: 300px">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-center">Weda Pradnyana </h3>
                 </div>
             </div>
             <div class="col-3">
                 <div class="d-flex justify-content-center align-items-center ">
-                    <img src="../img/Driver.png" alt="" style="max-width: 100px; max-height: 150px">
+                    <img src="../img/Driver/Mangwah2.jpeg" class="  rounded-4" alt=""
+                        style="max-width: 300px; max-height: 300px">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-center">Komang Wahyudita </h3>
                 </div>
             </div>
         </div>
@@ -255,8 +278,8 @@
                         <img src="../img/logo2.png" width="55" height="55" class="navbar-logo" alt="">
                         <h3 class="fw-bold">BRAVO RENT CAR</h3>
                     </a>
-
                     <p class="text-white mt-2">Drive in Paradise, Feel the Bravo Vibes! </p>
+
                 </div>
                 <div class="col-4">
 

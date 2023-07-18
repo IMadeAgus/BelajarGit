@@ -68,27 +68,33 @@ ul li a.nav-link:hover {
 
 /* Promo */
 .Promo {
-  min-height: 60vh;
+  min-height: 70vh;
   min-width: 100%;
-  display: flex;
-  align-items: center;
   background-image: url(../img/Promo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   text-align: center;
+  margin-top: 5rem;
 }
 
 .Promo .content {
+  padding-top: 6rem;
   max-width: 60rem;
   margin: 0 auto;
 }
 
 .Promo .content h1 {
+  padding-bottom: 1rem;
   font-size: 3em;
+  font-weight: 700;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
+.Promo .content h3 {
+  font-weight: 500;
+}
+
 /* Promo end */
 
 /* service */
@@ -121,7 +127,7 @@ ul li a.nav-link:hover {
   margin-top: 5em;
 }
 
-.carlist h4 {
+.carlist .content h4 {
   color: #412496;
 }
 
@@ -135,11 +141,23 @@ ul li a.nav-link:hover {
   color: #412496;
 }
 .card-img-top {
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
+.fotomobil {
+  margin-top: 1.2rem;
+  width: 260px;
+  height: 170px;
+}
+
+.carlist h5 {
+  font-weight: 600;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-inline: 0.5rem;
+}
 /* List Car End */
 
 /* Gallery */
@@ -160,6 +178,9 @@ ul li a.nav-link:hover {
 /* Gallery end */
 
 /* Driver */
+.driver {
+  margin-top: 15rem;
+}
 .driver img {
   width: 100%;
   height: 100%;

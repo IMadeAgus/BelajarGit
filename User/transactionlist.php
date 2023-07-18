@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'koneksi.php';?>
+<?php include '../Koneksi/koneksi.php';?>
 
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Sewa Mobil</title>
     <!-- Bootsrap -->
-    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="../Bootstrap/bootstrap.css" />
     <!-- CSS Custom -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../Css/formsewa-user.css" />
     <!-- CSS Responsive -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../Css/responsive.css">
     <!-- Aos -->
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- link swetalert2 -->
@@ -23,7 +23,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top  navbar-custom ">
         <div class="container py-2">
             <a class="navbar-brand fw-bold text-white d-flex align-items-center " href="#">
-                <img src="img/logo.png" width="50" height="50" class="navbar-logo" alt="">
+                <img src="../img/logo.png" width="50" height="50" class="navbar-logo" alt="">
                 BRAVO RENT CAR
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -83,7 +83,7 @@
                 <th>Aksi</th>
             </tr>
             <?php
-    include 'koneksi.php';
+    
     $no = 1;
     $sql = ("SELECT tbpengembalian.*,  tb_penyewa.nama,tb_penyewa.no_hp,tb_penyewa.no_ktp,tb_penyewa.tanggal_peminjaman,tb_penyewa.tanggal_pengembalian,tb_penyewa.lama_peminjaman,tbmobil.TipeMobil,tbmobil.Harga
     FROM tbpengembalian

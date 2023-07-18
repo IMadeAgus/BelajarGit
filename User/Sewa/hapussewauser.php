@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+include '../../Koneksi/koneksi.php';
 
 $id = $_GET['id'];
 mysqli_query($konek, "delete from tb_penyewa where id = $id");
