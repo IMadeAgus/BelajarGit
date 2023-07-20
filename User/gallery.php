@@ -15,9 +15,7 @@
     <link rel="stylesheet" href="../Css/responsive.css">
     <!-- Feather Icons -->
     <script script src="https://unpkg.com/feather-icons"></script>
-    <!-- Aos -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-    <!-- link swetalert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
@@ -133,6 +131,13 @@
                     </a>
 
                     <p class="text-white mt-2">Drive in Paradise, Feel the Bravo Vibes! </p>
+                    <div>
+                        <a href="https://www.instagram.com/bravoclasstrpl/"> <i
+                                class="fa-brands fa-instagram fa-2xl mx-3 icon-footer" style="color: #ffffff;"></i></a>
+                        <i class="fa-brands fa-whatsapp fa-2xl mx-4 icon-footer" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-square-facebook fa-2xl mx-3 icon-footer" style="color: #ffffff;"></i>
+
+                    </div>
                 </div>
                 <div class="col-4">
 
@@ -160,7 +165,7 @@
 
 
     <!-- Bootsrap js -->
-    <script src="js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
     <script>
     feather.replace()
     </script>

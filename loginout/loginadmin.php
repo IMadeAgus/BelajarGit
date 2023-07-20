@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="Login.css">
     <!-- Css Responsive -->
     <link rel="stylesheet" href="../Css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
@@ -48,18 +49,18 @@
                 <form action="cek-login.php" method="post" class="login-email">
                     <p style="font-size: 2rem; font-weight: 850;">Log In Admin</p>
 
-                    <div class="input-group"><input type="text" name="email" class="form_login" placeholder="Email .."
+                    <div class="input-group"><input type="text" name="email" class="form_login" placeholder="Email "
                             id="email" required="required">
                     </div>
 
                     <div class="input-group"><input type="password" name="password" class="form_login"
-                            placeholder="Password .." id="email" required="required">
+                            placeholder="Password " id="email" required="required">
                     </div>
 
                     <div class="input-group"><button name="submit" class="tombol">Log In</button></div>
 
                     <div class="login-register-text">
-                        <a href="login.php">Kembali. </a>
+                        <a href="../index.php">Kembali. </a>
                     </div>
 
                 </form>
@@ -79,6 +80,13 @@
                     </a>
 
                     <p class="text-white mt-2">Drive in Paradise, Feel the Bravo Vibes! </p>
+                    <div>
+                        <a href="https://www.instagram.com/bravoclasstrpl/"> <i
+                                class="fa-brands fa-instagram fa-2xl mx-3 icon-footer" style="color: #ffffff;"></i></a>
+                        <i class="fa-brands fa-whatsapp fa-2xl mx-4 icon-footer" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-square-facebook fa-2xl mx-3 icon-footer" style="color: #ffffff;"></i>
+
+                    </div>
                 </div>
                 <div class="col-4">
 

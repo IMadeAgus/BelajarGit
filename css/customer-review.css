@@ -16,7 +16,7 @@ body {
   position: absolute;
   height: 4px;
   border-radius: 1px;
-  background: #ff5555;
+  background: #412496;
   left: 0;
   bottom: -20px;
 }
@@ -100,7 +100,7 @@ body {
 }
 .carousel .overview b {
   text-transform: uppercase;
-  color: #ff5555;
+  color: #412496;
 }
 .carousel-control-prev,
 .carousel-control-next {
@@ -138,7 +138,7 @@ body {
 }
 .carousel-indicators li.active {
   color: #fff;
-  background: #ff5555;
+  background: #412496;
   border: 5px double;
 }
 .star-rating li {

@@ -7,7 +7,7 @@ error_reporting(0);
 session_start();
 
 if (isset($_SESSION['username'])) {
-    header('Location: login.php');
+    header('Location: ../index.php');
 }
 
 if (isset($_POST['submit'])) {
@@ -56,6 +56,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="Login.css">
     <!-- Css Responsive -->
     <link rel="stylesheet" href="../Css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
@@ -101,7 +102,7 @@ if (isset($_POST['submit'])) {
                         <button name="submit" class="tombol">Register</button>
                     </div>
                     <p class="login-register-text">Have an Account ?
-                        <a href="login.php">Log In</a>
+                        <a href="../index.php">Log In</a>
                     </p>
                 </form>
             </div>

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../../Css/responsive.css">
         <!-- Feather Icons -->
         <script script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 </tittle>
 
@@ -49,7 +50,7 @@ $hasil= mysqli_fetch_assoc($sql);
                         <a class="nav-link" href="../gallery.php">GALLERY</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="loginout/logout.php"
+                        <a class="nav-link" href="../../loginout/logout.php"
                             onclick="return confirm('Yakin mau Log Out?')">LOG
                             OUT</a>
                     </li>
@@ -112,6 +113,14 @@ $hasil= mysqli_fetch_assoc($sql);
                             </a>
 
                             <p class="text-white mt-2">Drive in Paradise, Feel the Bravo Vibes! </p>
+                            <div>
+                                <a href="https://www.instagram.com/bravoclasstrpl/"> <i
+                                        class="fa-brands fa-instagram fa-2xl mx-3 icon-footer"
+                                        style="color: #ffffff;"></i></a>
+                                <i class="fa-brands fa-whatsapp fa-2xl mx-4 icon-footer" style="color: #ffffff;"></i>
+                                <i class="fa-brands fa-square-facebook fa-2xl mx-3 icon-footer"
+                                    style="color: #ffffff;"></i>
+                            </div>
                         </div>
                         <div class="col-4">
 

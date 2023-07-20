@@ -250,6 +250,10 @@
   .Footer p {
     font-size: 10px;
   }
+  .icon-footer {
+    width: 5px;
+    height: 5px;
+  }
 
   /*Page Orderlist  */
   td {

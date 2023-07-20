@@ -20,6 +20,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 </head>
 
@@ -51,7 +52,7 @@
                         <a class="nav-link" href="gallery.php">GALLERY</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="loginout/logout.php"
+                        <a class="nav-link" href="../../loginout/logout.php"
                             onclick="return confirm('Yakin mau Log Out?')">LOG
                             OUT</a>
                     </li>
@@ -246,8 +247,8 @@
                                             varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel,
                                             semper malesuada ante.</p>
                                     </div>
-                                    <div class="media">
-                                        <img src="/examples/images/clients/1.jpg" class="mr-3" alt="">
+                                    <div class="media d-flex">
+                                        <img src="../img/Driver/Made.jpeg" class="mr-3" alt="">
                                         <div class="media-body">
                                             <div class="overview">
                                                 <div class="name"><b>Made Agus</b></div>
@@ -270,12 +271,12 @@
                                             Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat
                                             faucibus quam.</p>
                                     </div>
-                                    <div class="media">
-                                        <img src="/examples/images/clients/2.jpg" class="mr-3" alt="">
+                                    <div class="media d-flex">
+                                        <img src="../img/Driver/Weda.jpeg" class="mr-3" alt="">
                                         <div class="media-body">
                                             <div class="overview">
-                                                <div class="name"><b>Antonio Moreno</b></div>
-                                                <div class="details">Web Developer / SoftBee</div>
+                                                <div class="name"><b>Weda Pradnyana</b></div>
+
                                                 <div class="star-rating">
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -299,12 +300,12 @@
                                             varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel,
                                             semper malesuada ante.</p>
                                     </div>
-                                    <div class="media">
-                                        <img src="/examples/images/clients/3.jpg" class="mr-3" alt="">
+                                    <div class="media d-flex">
+                                        <img src="../img/Driver/Bagus.jpg" class="mr-3" alt="">
                                         <div class="media-body">
                                             <div class="overview">
-                                                <div class="name"><b>Michael Holz</b></div>
-                                                <div class="details">Web Developer / DevCorp</div>
+                                                <div class="name"><b>Bagus Sadewa</b></div>
+
                                                 <div class="star-rating">
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -324,19 +325,18 @@
                                             Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat
                                             faucibus quam.</p>
                                     </div>
-                                    <div class="media">
-                                        <img src="/examples/images/clients/4.jpg" class="mr-3" alt="">
+                                    <div class="media d-flex">
+                                        <img src="../img/Driver/Krisna.jpeg" class="mr-3" alt="">
                                         <div class="media-body">
                                             <div class="overview">
-                                                <div class="name"><b>Mary Saveley</b></div>
-                                                <div class="details">Graphic Designer / MarsMedia</div>
+                                                <div class="name"><b>Steve</b></div>
                                                 <div class="star-rating">
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -353,12 +353,12 @@
                                             varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel,
                                             semper malesuada ante.</p>
                                     </div>
-                                    <div class="media">
+                                    <div class="media d-flex">
                                         <img src="/examples/images/clients/5.jpg" class="mr-3" alt="">
                                         <div class="media-body">
                                             <div class="overview">
-                                                <div class="name"><b>Martin Sommer</b></div>
-                                                <div class="details">SEO Analyst / RealSearch</div>
+                                                <div class="name"><b>Agness</b></div>
+
                                                 <div class="star-rating">
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -378,14 +378,13 @@
                                             Utmtc tempus dictum. Pellentesque virra. Quis quam ut magna consequat
                                             faucibus quam.</p>
                                     </div>
-                                    <div class="media">
+                                    <div class="media d-flex">
                                         <div class="media-left d-flex mr-3">
-                                            <img src="/examples/images/clients/6.jpg" alt="">
+                                            <img src="../img/Driver/Mangwah2.jpeg" alt="">
                                         </div>
                                         <div class="media-body">
                                             <div class="overview">
-                                                <div class="name"><b>John Williams</b></div>
-                                                <div class="details">Web Designer / UniqueDesign</div>
+                                                <div class="name"><b>Mangwah</b></div>
                                                 <div class="star-rating">
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -421,11 +420,11 @@
         <div class="row mt-5 container-foto ">
             <div class="col-3 ">
                 <div class="d-flex justify-content-center align-items-center">
-                    <img src="../img/Driver/Krisna.jpeg" class="  rounded-4" alt=""
+                    <img src="../img/Driver/Bagus.jpg" class="  rounded-4" alt=""
                         style="max-width: 300px; max-height: 300px">
                 </div>
                 <div class="mt-2">
-                    <h3 class="text-center">Krishna Paradipta </h3>
+                    <h3 class="text-center">Bagus Sadewa </h3>
                 </div>
             </div>
             <div class="col-3">
@@ -470,6 +469,13 @@
                         <h3 class="fw-bold">BRAVO RENT CAR</h3>
                     </a>
                     <p class="text-white mt-2">Drive in Paradise, Feel the Bravo Vibes! </p>
+                    <div>
+                        <a href="https://www.instagram.com/bravoclasstrpl/"> <i
+                                class="fa-brands fa-instagram fa-2xl mx-3 icon-footer" style="color: #ffffff;"></i></a>
+                        <i class="fa-brands fa-whatsapp fa-2xl mx-4 icon-footer" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-square-facebook fa-2xl mx-3 icon-footer" style="color: #ffffff;"></i>
+
+                    </div>
 
                 </div>
                 <div class="col-4">

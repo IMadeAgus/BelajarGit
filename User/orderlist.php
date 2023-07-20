@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../Css/formsewa-user.css" />
     <!-- CSS Responsive -->
     <link rel="stylesheet" href="../Css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 </head>
 
@@ -56,27 +57,26 @@
     <!-- //End Navbar Session -->
 
     <!-- Table Order List -->
-
     <div class="container-fluid">
         <div class="row d-flex align-items-center mt-4">
             <div class="col-4">
                 <h2>Order List</h2>
             </div>
-        </div>
-        <table class="table table-bordered text-center OrderList mt-2">
-            <tr style="background-color: #412496;" class="text-white">
-                <th>No</th>
-                <th>Name</th>
-                <th>Phone Number</th>
-                <th>Id Card Number </th>
-                <th>Car Type</th>
-                <th>Price</th>
-                <th>Loan Date </th>
-                <th>Return Date</th>
-                <th>Lenght of Loan</th>
-                <th>Action</th>
-            </tr>
-            <?php
+            <div>
+                <table class="table table-bordered text-center mt-2" width="100%">
+                    <tr style="background-color: #412496;" class="text-white">
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Id Card Number </th>
+                        <th>Car Type</th>
+                        <th>Price</th>
+                        <th>Loan Date </th>
+                        <th>Return Date</th>
+                        <th>Lenght of Loan</th>
+                        <th>Action</th>
+                    </tr>
+                    <?php
             
             $no = 1;
             $sql = ("SELECT tb_penyewa.*,tbmobil.TipeMobil, tbmobil.Harga
@@ -87,36 +87,37 @@
 
             while ($data = mysqli_fetch_array($query)) {
             ?>
-            <tr class="align-middle">
-                <td><?php echo $no++; ?></td>
-                <td><?= $data['nama'] ?></td>
-                <td><?= $data['no_hp'] ?></td>
-                <td><?= $data['no_ktp'] ?></td>
-                <td><?= $data['TipeMobil'] ?></td>
-                <td><?= $data['Harga'] ?></td>
-                <td><?= $data['tanggal_peminjaman'] ?></td>
-                <td><?= $data['tanggal_pengembalian'] ?></td>
-                <td><?= $data['lama_peminjaman']  . 'hari' ?></td>
-                <td>
-                    <a class=" btn tmbl btn-info " href=" Bayar/formbayaruser.php?id=<?php echo $data['id']; ?>">
-                        Bayar</a>
-                    <a class="btn tmbl btn-success "
-                        href="Sewa/formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
-                    <a class="btn tmbl btn-danger" href="Sewa/hapussewauser.php?id= <?php echo $data['id']; ?> "
-                        onclick="return confirm('Apakah Anda Yakin Menghapus Data?')">Hapus </a>
-                </td>
-            </tr>
-            <?php } ?>
-        </table>
-        <div class="row">
-            <div class="d-flex align-items-end justify-content-end">
-                <a class="btn tmbl btn-warning" href="/admin/penyewa/cetak.php?id=<?php echo $data['id']; ?>">Print</a>
+                    <tr class="align-middle">
+                        <td><?php echo $no++; ?></td>
+                        <td><?= $data['nama'] ?></td>
+                        <td><?= $data['no_hp'] ?></td>
+                        <td><?= $data['no_ktp'] ?></td>
+                        <td><?= $data['TipeMobil'] ?></td>
+                        <td><?= $data['Harga'] ?></td>
+                        <td><?= $data['tanggal_peminjaman'] ?></td>
+                        <td><?= $data['tanggal_pengembalian'] ?></td>
+                        <td><?= $data['lama_peminjaman']  . 'hari' ?></td>
+                        <td>
+                            <a class=" btn tmbl btn-info "
+                                href=" Bayar/formbayaruser.php?id=<?php echo $data['id']; ?>">
+                                Bayar</a>
+                            <a class="btn tmbl btn-success "
+                                href="Sewa/formeditsewauser.php?id=<?php echo $data['id']; ?>">Edit</a>
+                            <a class="btn tmbl btn-danger" href="Sewa/hapussewauser.php?id= <?php echo $data['id']; ?> "
+                                onclick="return confirm('Apakah Anda Yakin Menghapus Data?')">Hapus </a>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                </table>
+            </div>
+        </div>
+        <div class="row ">
+            <div class=" d-flex justify-content-end">
+                <a class="btn tmbl btn-warning"
+                    href="../admin/penyewa/cetak.php?id=<?php echo $data['id']; ?>">Print</a>
             </div>
         </div>
     </div>
-
-    <!-- End Tablr Order List Session -->
-
     <!-- Footer -->
     <section class="Footer ">
         <div class="container-fluid">
@@ -129,6 +130,13 @@
                     </a>
 
                     <p class="text-white mt-2">Drive in Paradise, Feel the Bravo Vibes! </p>
+                    <div>
+                        <a href="https://www.instagram.com/bravoclasstrpl/"> <i
+                                class="fa-brands fa-instagram fa-2xl mx-3 icon-footer" style="color: #ffffff;"></i></a>
+                        <i class="fa-brands fa-whatsapp fa-2xl mx-4 icon-footer" style="color: #ffffff;"></i>
+                        <i class="fa-brands fa-square-facebook fa-2xl mx-3 icon-footer" style="color: #ffffff;"></i>
+
+                    </div>
                 </div>
                 <div class="col-4">
 
@@ -149,7 +157,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <!--  -->
