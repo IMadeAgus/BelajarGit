@@ -1,7 +1,10 @@
 .bg {
-  background-image: url(../../img/bgform-sewa.png);
-  height: 230vh;
+  background-image: url(../../img/bg.jpg);
+  max-height: 180vh;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Navbar */
@@ -26,14 +29,14 @@ ul li a.nav-link:hover {
 /* Navbar End */
 
 .form {
-  padding-top: 10rem;
+  padding-top: 3rem;
 }
 .tmbl {
   width: 90px;
 }
 /* Footer */
 .Footer-sewauser {
-  margin-top: 30rem;
+  margin-top: 13rem;
   background-color: #412496;
 }
 
